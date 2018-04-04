@@ -1,10 +1,10 @@
 {
   "private": true,
-  "name": "my-site",
+  "name": "personal-website",
   "version": "0.1.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/raybergholm/my-site.git"
+    "url": "https://github.com/raybergholm/personal-website.git"
   },
   "license": "MIT",
   "main": "",
