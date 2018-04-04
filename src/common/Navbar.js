@@ -1,29 +1,22 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+const createNavbarItems = (items) => {
+  items.map((item) => (
+    <li key={item.id} className="navbar-item">
+      <a href={item.link} className="nav-link">{item.text}</a>
+    </li>
+  ));
+};
+
 const Navbar = ({ mainTitle, items }) => (
   <nav className="navbar navbar-light bg-light">
     <a href="#" className="navbar-brand">{mainTitle}</a>
-    {items && 
+    {items &&
       <ul className="navbar-nav">
-        {items.map((item) => (<li className="navbar-item">
-        <a href={item.link} className="nav-link">{item.text}</a>
-      </li>))}
-        <li className="navbar-item">
-          <a href="#" className="nav-link">Homepage</a>
-        </li>
-        <li className="navbar-item">
-          <a href="#" className="nav-link">Blog</a>
-        </li>
-        <li className="navbar-item">
-          <a href="#" className="nav-link">About</a>
-        </li>
-        <li className="navbar-item">
-          <a href="#" className="nav-link">Contact Us</a>
-        </li>
+        {createNavbarItems(items)}
       </ul>
     }
-    
   </nav>
 );
 

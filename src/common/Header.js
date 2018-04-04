@@ -2,9 +2,16 @@ import React from "react";
 
 import Navbar from "./Navbar";
 
+const navbarItems = [
+  { id: "home", text: "Home", link: "/" },
+  { id: "aboutme", text: "About Me", link: "/About" },
+  { id: "blog", text: "Blog", link: "/Blog" },
+  { id: "cv", text: "CV", link: "/CV" }
+];
+
 const Header = () => (
   <div className="App-header">
-    <Navbar />
+    <Navbar mainTitle="Main Title" items={navbarItems} />
   </div>
 );
 
