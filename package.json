@@ -1,0 +1,38 @@
+{
+  "private": true,
+  "name": "my-site",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/raybergholm/my-site.git"
+  },
+  "license": "MIT",
+  "main": "",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "lint": "node_modules/.bin/eslint src/**/**.js",
+    "test": "mocha --compilers js:babel-core/register 'tests/*.test.js'",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "ajv": "^6.4.0",
+    "bootstrap": "^4.0.0",
+    "globalize": "^1.3.0",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.2",
+    "prop-types": "^15.6.1",
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1",
+    "react-scripts": "1.1.4"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "chai": "^4.1.2",
+    "eslint": "^4.18.2",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0",
+    "mocha": "^5.0.2"
+  }
+}
