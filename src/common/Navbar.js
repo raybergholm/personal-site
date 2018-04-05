@@ -1,12 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+import NavbarItem from "./NavbarItem";
+
 const createNavbarItems = (items) => {
-  items.map((item) => (
-    <li key={item.id} className="navbar-item">
-      <a href={item.link} className="nav-link">{item.text}</a>
-    </li>
-  ));
+  items.map(({key, text, link}) => <NavbarItem key={key} text={text} link={link} />);
 };
 
 const Navbar = ({ mainTitle, items }) => (
