@@ -15,6 +15,8 @@ const createNav = (items) => (
           return <NavDropdown key={payload.key} eventKey={payload.key} title={payload.title}>
             {payload.menuItems.map(({menuItemKey, text}) => (<MenuItem key={menuItemKey} eventKey={menuItemKey}>{text}</MenuItem>))}
           </NavDropdown>;
+        default:
+          return null;
       }
     })}
   </Nav>

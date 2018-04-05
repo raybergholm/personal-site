@@ -1,7 +1,7 @@
 import React from "react";
 
 import Header from "./components/Header";
-import AppRouter from "./routes";
+import AppRouter from "./AppRouter";
 import Footer from "./components/Footer";
 
 import "./App.css";
