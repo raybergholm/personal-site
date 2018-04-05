@@ -1,0 +1,26 @@
+[
+  {
+    "type": "item",
+    "payload": {
+      "key": "blog",
+      "text": "Blog",
+      "link": "/blog" 
+    }
+  },
+  {
+    "type": "item",
+    "payload": {
+      "key": "about",
+      "text": "About",
+      "link": "/about" 
+    }
+  },
+  {
+    "type": "item",
+    "payload": {
+      "key": "contact",
+      "text": "Contact",
+      "link": "/contact" 
+    }
+  }
+]

@@ -1,23 +1,27 @@
 import React from "react";
-import PropTypes from "prop-types";
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 
 import HomePage from "./pages/Home";
-import AboutPage from "./pages/About";
-import BlogSplashPage from "./pages/blog/Splash";
+import AboutPage from "./pages/AboutPage";
+import ContactPage from "./pages/ContactPage";
 
-const AppRouter = ({ history }) => (
-  <BrowserRouter history={history}>
-    <div>
+import BlogFeedPage from "./pages/blog/Feed";
+import BlogArchivePage from "./pages/blog/Archive";
+import BlogArticlePage from "./pages/blog/Article";
+
+const AppRouter = () => (
+  <BrowserRouter>
+    <Switch>
       <Route exact path="/" component={HomePage} />
       <Route path="/about" component={AboutPage} />
-      <Route path="/blog" component={BlogSplashPage} />
-    </div>
+      <Route path="/contact" component={ContactPage} />
+      <Route exact path="/blog" component={BlogFeedPage} />
+      <Route exact path="/blog/archive" component={BlogArchivePage} />
+      <Route exact path="/blog/article" component={BlogArticlePage} />
+      <Redirect path="/blog/*" to="/blog" />
+      <Redirect path="*" to="/" />
+    </Switch>
   </BrowserRouter>
 );
-
-AppRouter.propTypes = {
-  history: PropTypes.object.isRequired
-};
 
 export default AppRouter;

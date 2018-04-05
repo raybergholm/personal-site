@@ -2,7 +2,7 @@ import React from "react";
 
 const Page = () => (
     <div>
-        <p>I am the home page</p>
+        <p>I am the contact page</p>
     </div>
 );
 
