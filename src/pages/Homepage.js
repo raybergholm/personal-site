@@ -1,8 +1,8 @@
 import React from "react";
 
-import Header from "../common/Header";
-import PageContainer from "../common/PageContainer";
-import Footer from "../common/Footer";
+import Header from "../components/Header";
+import PageContainer from "../components/PageContainer";
+import Footer from "../components/Footer";
 
 const Homepage = () => (
     <div>
