@@ -5,15 +5,16 @@ import PageContainer from "../components/PageContainer";
 import Footer from "../components/Footer";
 
 const content = {
-    
+    main: "hi"
 };
 
-const Homepage = () => (
+const AboutPage = () => (
     <div>
         <Header />
         <PageContainer content={content}/>
+        <p>I am the about page</p>
         <Footer />
     </div>
 );
 
-export default Homepage;
+export default AboutPage;

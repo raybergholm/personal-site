@@ -1,11 +1,13 @@
-import React from 'react';
+import React from "react";
 
-import Homepage from "./pages/Homepage";
+import AppRouter from "./routes";
 
-import './App.css';
+import "./App.css";
+
+const history = {};
 
 const App = () => (
-  <Homepage />
+  <AppRouter history={history} />
 );
 
 export default App;
