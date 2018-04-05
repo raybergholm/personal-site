@@ -9,7 +9,7 @@ import BlogSplashPage from "./pages/blog/Splash";
 const AppRouter = ({ history }) => (
   <BrowserRouter history={history}>
     <div>
-      <Route path="/" component={HomePage} />
+      <Route exact path="/" component={HomePage} />
       <Route path="/about" component={AboutPage} />
       <Route path="/blog" component={BlogSplashPage} />
     </div>
