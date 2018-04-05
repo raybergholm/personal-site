@@ -7,7 +7,7 @@ import ContactPage from "./pages/ContactPage";
 
 import BlogFeedPage from "./pages/blog/Feed";
 import BlogArchivePage from "./pages/blog/Archive";
-import BlogArticlePage from "./pages/blog/Article";
+import BlogArticlePage from "./pages/blog/ArticleView";
 
 const AppRouter = () => (
   <BrowserRouter>
