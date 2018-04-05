@@ -1,17 +1,39 @@
 import React from "react";
 
-import Navbar from "./navbar/Navbar";
+import Navbar from "./Navbar";
+
+import { Jumbotron } from "react-bootstrap";
+
+const brand = {
+  text: "Hi",
+  link: "/"
+};
 
 const navbarItems = [
-  { id: "home", text: "Home", link: "/" },
-  { id: "aboutme", text: "About Me", link: "/About" },
-  { id: "blog", text: "Blog", link: "/Blog" },
-  { id: "cv", text: "CV", link: "/CV" }
+  {
+    type: "item",
+    payload: {
+      key: "about",
+      text: "About",
+      link: "/about" 
+    }
+  },
+  {
+    type: "item",
+    payload: {
+      key: "blog",
+      text: "Blog",
+      link: "/blog" 
+    }
+  }
 ];
 
 const Header = () => (
-  <div className="App-header">
-    <Navbar mainTitle="Main Title" items={navbarItems} />
+  <div>
+    <Jumbotron>
+      <p>This is a Jumbotron</p>
+    </Jumbotron>
+    <Navbar brand={brand} items={navbarItems} />
   </div>
 );
 
