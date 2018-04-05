@@ -1,13 +1,17 @@
 import React from "react";
 
+import Header from "./components/Header";
 import AppRouter from "./routes";
+import Footer from "./components/Footer";
 
 import "./App.css";
 
-const history = {};
-
 const App = () => (
-  <AppRouter history={history} />
+  <div>
+    <Header />
+    <AppRouter />
+    <Footer />
+</div>
 );
 
 export default App;
