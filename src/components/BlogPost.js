@@ -12,8 +12,8 @@ const converter = new Showdown.Converter({
 
 const parseText = (text) => converter.makeHtml(text);
 
-const Article = ({ _id, title, timestamp, author, body }) => (
-  <div id={`article_${_id}`}>
+const BlogPost = ({ _id, title, timestamp, author, body }) => (
+  <div id={`blog-post-${_id}`}>
     <h2>{title}</h2>
     <p>{timestamp} by {author}</p>
     <hr />
@@ -23,7 +23,7 @@ const Article = ({ _id, title, timestamp, author, body }) => (
   </div>
 );
 
-Article.propTypes = {
+BlogPost.propTypes = {
   _id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   timestamp: PropTypes.string.isRequired,
@@ -31,4 +31,4 @@ Article.propTypes = {
   body: PropTypes.object.isRequired
 };
 
-export default Article;
+export default BlogPost;

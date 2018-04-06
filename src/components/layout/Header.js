@@ -4,7 +4,7 @@ import { Jumbotron } from "react-bootstrap";
 
 import Navbar from "./Navbar";
 
-import navbarItems from "../config/navbarItems.json";
+import navbarItems from "../../config/navbarItems.json";
 
 const brand = {
   text: "Hi",
