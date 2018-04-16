@@ -1,5 +1,10 @@
 [
   {
+    "key": "home",
+    "text": "Home",
+    "link": "/"
+  },
+  {
     "key": "blog",
     "text": "Blog",
     "link": "/blog"
