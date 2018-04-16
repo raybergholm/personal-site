@@ -7,9 +7,11 @@ import sidebarEntries from "../../config/sidebarEntries.json";
 const { Menu } = Foundation;
 
 const BlogSidebar = () => (
-  <menu>
-    <h4>Archives</h4>
-    <Menu items={sidebarEntries} vertical={true} />
+  <menu data-sticky-container>
+    <div data-sticky>
+      <h4>Archives</h4>
+      <Menu items={sidebarEntries} vertical={true} />
+    </div>
   </menu>
 );
 
