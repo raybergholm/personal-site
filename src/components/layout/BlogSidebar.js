@@ -7,10 +7,10 @@ import sidebarEntries from "../../config/sidebarEntries.json";
 const { Menu } = Foundation;
 
 const BlogSidebar = () => (
-  <div>
+  <menu>
     <h4>Archives</h4>
     <Menu items={sidebarEntries} vertical={true} />
-  </div>
+  </menu>
 );
 
 export default BlogSidebar;

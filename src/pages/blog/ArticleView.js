@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import FlexColumnContainer from "../../components/layout/FlexColumnContainer";
+import ArticleNavigation from "../../components/layout/ArticleNavigation";
 import BlogPost from "../../components/BlogPost";
 import BlogSidebar from "../../components/layout/BlogSidebar";
 
@@ -16,8 +17,15 @@ const fetchArticle = (articleId) => {
   return post ? <BlogPost key={post._id} {...post} /> : null;
 };
 
+const getMainContent = (articleId) => (
+  <div>
+    <ArticleNavigation />
+    {fetchArticle(articleId)}
+  </div>
+);
+
 const fetchContent = (articleId) => ({
-  mainContent: fetchArticle(articleId),
+  mainContent: getMainContent(articleId),
   rightContent: (<BlogSidebar />)
 });
 
