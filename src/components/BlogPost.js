@@ -26,7 +26,7 @@ const BlogPost = ({ _id, link, title, timestamp, author, body }) => (
 BlogPost.propTypes = {
   _id: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
-  body: PropTypes.object.isRequired,
+  body: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
   timestamp: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired
