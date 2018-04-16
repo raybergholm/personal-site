@@ -9,7 +9,7 @@ import "./index.css";
 // Foundation
 import "foundation-sites/dist/css/foundation.min.css";
 
-import foundation from "foundation-sites/dist/js/foundation.min.js";
+// import foundation from "foundation-sites/dist/js/foundation.min.js";
 
 import App from "./App";
 import registerServiceWorker from "./registerServiceWorker";
