@@ -5,12 +5,7 @@ import { generateClassName } from "./utils";
 
 import MenuItem from "./MenuItem";
 
-const createMenuTextItem = (item) => (<li className="menu-text">{item}</li>);
-const createItems = (item) => (<li>{item}</li>);
-
-const CLASSNAME_DELIMITER = " ";
-
-const createMenuClassName = () => {
+const createMenuClassName = ({ simple, vertical, alignMiddle, alignRight, icons, iconTop, iconBottom, iconLeft, iconRight }) => {
   const props = [];
 
   if (simple) {
@@ -45,8 +40,8 @@ const createMenuClassName = () => {
 };
 
 const Menu = ({ items, selected, ...props }) => (
-  <ul className="menu">
-    {items.map(({ children, text, isActive }) => (<MenuItem {text ? text : null}>{children}</MenuItem>))}
+  <ul className={createMenuClassName(props)}>
+    {items.map(({ children, text, isActive }) => (<MenuItem key={1} text={text}>{children}</MenuItem>))}
   </ul>
 );
 
