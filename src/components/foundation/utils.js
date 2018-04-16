@@ -5,7 +5,7 @@ export const generateClassName = (baseName, extras) => {
   if (baseName) {
     result.push(baseName);
   }
-  if (extras) {
+  if (extras && extras instanceof Array) {
     for (const extra of extras) {
       result.push(extra);
     }
