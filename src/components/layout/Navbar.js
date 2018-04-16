@@ -10,7 +10,6 @@ const createMenu = (brand, items) => {
   menuItems.push(brand);
   menuItems = menuItems.concat(items);
   
-  console.log(menuItems);
   return (<Menu items={menuItems} />);
 };
 
