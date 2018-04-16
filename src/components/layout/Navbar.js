@@ -1,8 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import TopBar from "../foundation/TopBar";
-import Menu from "../foundation/Menu";
+import Foundation from "../foundation/Foundation";
+
+const { TopBar, Menu } = Foundation;
+
+// import TopBar from "../foundation/TopBar";
+// import Menu from "../foundation/Menu";
 
 const createMenu = (brand, items) => {
 

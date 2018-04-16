@@ -1,22 +1,17 @@
-[
-  {
-    "key": "home",
-    "text": "Home",
-    "link": "/"
-  },
-  {
-    "key": "blog",
-    "text": "Blog",
-    "link": "/blog"
-  },
-  {
-    "key": "about",
-    "text": "About",
-    "link": "/about"
-  },
-  {
-    "key": "contact",
-    "text": "Contact",
-    "link": "/contact"
-  }
+[{
+        "text": "Home",
+        "link": "/"
+    },
+    {
+        "text": "Blog",
+        "link": "/blog"
+    },
+    {
+        "text": "About",
+        "link": "/about"
+    },
+    {
+        "text": "Contact",
+        "link": "/contact"
+    }
 ]

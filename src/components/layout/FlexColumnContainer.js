@@ -1,7 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { Cell, Row } from "../foundation/XyGrid";
+import Foundation from "../foundation/Foundation";
+
+const { Cell, Row } = Foundation;
+
+// import { Cell, Row } from "../foundation/Foundation";
 
 const Container = ({ mainContent, leftContent, rightContent }) => (
   <article className="grid-container">
@@ -18,7 +22,7 @@ const Container = ({ mainContent, leftContent, rightContent }) => (
         <Cell small={12} medium={9} large={9}>{mainContent}</Cell>
       </Row>
     )}
-    {leftContent && !rightContent && (
+    {!leftContent && rightContent && (
       <Row>
         <Cell small={12} medium={9} large={9}>{mainContent}</Cell>
         <Cell medium={2} large={3}>{rightContent}</Cell>
