@@ -3,10 +3,10 @@ import PropTypes from "prop-types";
 
 import { generateClassName } from "./utils";
 
-const createMenuItemClassName = ({ text, isActive }) => {
+const createMenuItemClassName = ({ menuText, isActive }) => {
   const props = [];
 
-  if (text) {
+  if (menuText) {
     props.push("menu-text");
   }
   if (isActive) {
@@ -16,12 +16,16 @@ const createMenuItemClassName = ({ text, isActive }) => {
   return generateClassName("", props);
 };
 
-const MenuItem = ({ children, ...props }) => (
-  <li className={createMenuItemClassName(props)}>{children}</li>
+const MenuItem = ({ link, text, ...props }) => (
+  <li className={createMenuItemClassName(props)}>
+    {link ? <a href={link}>{text}</a> : text}
+  </li>
 );
 
 MenuItem.propTypes = {
-  children: PropTypes.object
+  children: PropTypes.object,
+  link: PropTypes.string,
+  text: PropTypes.string
 };
 
 export default MenuItem;

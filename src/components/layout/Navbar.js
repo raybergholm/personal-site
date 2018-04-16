@@ -1,39 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from "react-bootstrap";
+import TopBar from "../foundation/TopBar";
+import Menu from "../foundation/Menu";
 
-const createNav = (items) => (
-  <Nav>
-    {items.map(({type, payload}) => {
-      switch(type) {
-        case "item":
-          return <NavItem key={payload.key} eventKey={payload.key} href={payload.link}>
-            {payload.text}
-          </NavItem>;
-        case "dropdown":
-          return <NavDropdown key={payload.key} eventKey={payload.key} title={payload.title}>
-            {payload.menuItems.map(({menuItemKey, text}) => (<MenuItem key={menuItemKey} eventKey={menuItemKey}>{text}</MenuItem>))}
-          </NavDropdown>;
-        default:
-          return null;
-      }
-    })}
-  </Nav>
-);
+const createMenu = (brand, items) => {
+  const menuItems = [];
+  menuItems.concat(brand);
+  menuItems.concat(items);
+  return (<Menu items={menuItems} />);
+};
 
 const MyNavbar = ({ brand, items }) => (
-  <Navbar>
-    <Navbar.Header>
-      <Navbar.Brand>
-        <a href={brand.link}>{brand.text}</a>
-      </Navbar.Brand>
-      <Navbar.Toggle />
-    </Navbar.Header>
-    <Navbar.Collapse>
-      {createNav(items)}
-    </Navbar.Collapse>
-  </Navbar>
+  <TopBar left={createMenu(brand, items)} />
 );
 
 MyNavbar.propTypes = {

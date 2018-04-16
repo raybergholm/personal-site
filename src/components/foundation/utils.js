@@ -1,4 +1,4 @@
-export const classNameGenerator = (baseName, extras) => {
+export const generateClassName = (baseName, extras) => {
   const DELIMITER = " ";
   const result = [];
 

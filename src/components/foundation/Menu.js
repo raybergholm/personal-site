@@ -39,9 +39,9 @@ const createMenuClassName = ({ simple, vertical, alignMiddle, alignRight, icons,
   return generateClassName("menu", props);
 };
 
-const Menu = ({ items, selected, ...props }) => (
+const Menu = ({ items, ...props }) => (
   <ul className={createMenuClassName(props)}>
-    {items.map(({ children, text, isActive }) => (<MenuItem key={1} text={text}>{children}</MenuItem>))}
+    {items.map(({ key, link, text }) => (<MenuItem key={key} link={link} text={text} />))}
   </ul>
 );
 
