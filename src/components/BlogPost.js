@@ -17,9 +17,7 @@ const BlogPost = ({ _id, title, timestamp, author, body }) => (
     <h2>{title}</h2>
     <p>{timestamp} by {author}</p>
     <hr />
-    <div>
-      {parseText(body)}
-    </div>
+    <div dangerouslySetInnerHTML={{__html: parseText(body)}} />
   </div>
 );
 
