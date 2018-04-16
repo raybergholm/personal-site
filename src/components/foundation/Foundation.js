@@ -2,15 +2,14 @@ import Card from "./Card";
 import Menu from "./Menu";
 import MenuItem from "./MenuItem";
 import TopBar from "./TopBar";
-import { GridContainer, Row, Col, Cell } from "./XyGrid";
+import XyGrid from "./XyGrid";
 
-export default {
+const Foundation = {
   Card,
   Menu,
   MenuItem,
   TopBar,
-  GridContainer,
-  Row,
-  Col,
-  Cell
+  ...XyGrid
 };
+
+export default Foundation;

@@ -17,15 +17,14 @@ const createMenuItemClassName = ({ menuText, isActive }) => {
   return name;
 };
 
-const MenuItem = ({ key, link, text, ...props }) => (
-  <li className={createMenuItemClassName(props)} key={key}>
+const MenuItem = ({ link, text, ...props }) => (
+  <li className={createMenuItemClassName(props)}>
     {link ? <a href={link}>{text}</a> : text}
   </li>
 );
 
 MenuItem.propTypes = {
   children: PropTypes.object,
-  key: PropTypes.string,
   link: PropTypes.string,
   text: PropTypes.string
 };

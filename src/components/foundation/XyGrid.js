@@ -88,10 +88,10 @@ export const Col = ({ children, ...props }) => (
 );
 
 export default {
-  GridContainer: GridContainer,
-  Cell: Cell,
-  Row: Row,
-  Col: Col
+  GridContainer,
+  Cell,
+  Row,
+  Col
 };
 
 // PropType validation
