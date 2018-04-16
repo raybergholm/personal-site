@@ -8,7 +8,7 @@ const Button = ({ link, action, text, ...props }) => {
     return <a href={link} className={generateClassName("button", props)}>{text}</a>;
   }
   if(action) {
-    <button type="button" onClick={action} className={generateClassName("button", ...props)}>{text}</button>;
+    return <button type="button" onClick={action} className={generateClassName("button", ...props)}>{text}</button>;
   }
   return null;
 };
