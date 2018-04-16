@@ -5,19 +5,22 @@ import TopBar from "../foundation/TopBar";
 import Menu from "../foundation/Menu";
 
 const createMenu = (brand, items) => {
-  const menuItems = [];
-  menuItems.concat(brand);
-  menuItems.concat(items);
+
+  let menuItems = [];
+  menuItems.push(brand);
+  menuItems = menuItems.concat(items);
+  
+  console.log(menuItems);
   return (<Menu items={menuItems} />);
 };
 
-const MyNavbar = ({ brand, items }) => (
+const Navbar = ({ brand, items }) => (
   <TopBar left={createMenu(brand, items)} />
 );
 
-MyNavbar.propTypes = {
+Navbar.propTypes = {
   brand: PropTypes.object.isRequired,
   items: PropTypes.arrayOf(PropTypes.object)
 };
 
-export default MyNavbar;
+export default Navbar;
