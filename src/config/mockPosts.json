@@ -3,7 +3,7 @@
         "title": "First post",
         "timestamp": "01.04.2018",
         "author": "Bob",
-        "body": "Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus."
+        "body": "**I am testing** if _markdown_ is active."
     },
     {
         "_id": "2",
