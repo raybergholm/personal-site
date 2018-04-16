@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 import Showdown from "showdown";
 
-const ARTICLE_ROOT_URL = "/blog/";
+const ARTICLE_ROOT_URL = "/blog/article/";
 
 const converter = new Showdown.Converter({
   headerLevelStart: 3,

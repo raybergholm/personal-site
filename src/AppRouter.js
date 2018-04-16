@@ -16,9 +16,8 @@ const AppRouter = () => (
       <Route path="/about" component={AboutPage} />
       <Route path="/contact" component={ContactPage} />
       <Route exact path="/blog" component={BlogFeedPage} />
-      <Route path="/blog/archive" component={BlogArchivePage} />
-      <Route path="/blog/article" component={BlogArticlePage} />
-      <Route path="/blog/:articleId" component={BlogArticlePage} />
+      <Route path="/blog/article/:articleId" component={BlogArticlePage} />
+      <Route path="/blog/archive/:year/:month" component={BlogArchivePage} />
       <Redirect path="/blog/*" to="/blog" />
       <Redirect path="*" to="/" />
     </Switch>
