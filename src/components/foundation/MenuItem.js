@@ -13,9 +13,7 @@ const createMenuItemClassName = ({ menuText, isActive }) => {
     props.push("is-active");
   }
 
-  console.log("props:", props);
   const name = generateClassName("", props);
-  console.log("resulting name:", name);
   return name;
 };
 
