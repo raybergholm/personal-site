@@ -33,9 +33,18 @@ const Container = ({ mainContent, leftContent, rightContent }) => (
 );
 
 Container.propTypes = {
-  mainContent: PropTypes.object.isRequired,
-  leftContent: PropTypes.object,
-  rightContent: PropTypes.object
+  mainContent: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array
+  ]),
+  leftContent: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array
+  ]),
+  rightContent: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array
+  ])
 };
 
 export default Container;
