@@ -11,7 +11,7 @@ const App = () => (
     <Header />
     <AppRouter />
     <Footer />
-</div>
+  </div>
 );
 
 export default App;
