@@ -9,6 +9,8 @@ import BlogSidebar from "../../components/layout/BlogSidebar";
 
 import mockPosts from "../../config/mockPosts.json";
 
+const getPageNumber = (params) => params.pageNumber;
+
 const fetchMockContent = () => {
   const posts = mockPosts.map((props) => (<BlogPost key={props._id} {...props} />));
   
@@ -25,7 +27,6 @@ const fetchMockContent = () => {
 
 const Page = ({match}) => (
   <div id="main-content-section">
-    <p>You are at page {match.params.pageNumber || 1}</p>
     <FlexColumnContainer {...fetchMockContent()} />
   </div>
 );
