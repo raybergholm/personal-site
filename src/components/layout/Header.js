@@ -1,5 +1,7 @@
 import React from "react";
 
+import Foundation from "../foundation/Foundation";
+
 import Navbar from "./Navbar";
 
 import navbarItems from "../../config/navbarItems.json";
@@ -18,6 +20,7 @@ const Header = () => (
     <div className="sticky" style={stickyBarStyle} data-sticky data-options="marginTop:0;" data-top-anchor="1">
       <Navbar brand={brand} items={navbarItems} />
     </div>
+    
   </header>
 );
 

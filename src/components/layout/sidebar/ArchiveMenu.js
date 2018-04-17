@@ -1,9 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import Foundation from "../../foundation/Foundation";
-
-const { Menu } = Foundation;
+import { Menu } from "../../foundation/Foundation";
 
 const ArchiveMenu = ({ items }) => (
   <menu className="archive-menu">

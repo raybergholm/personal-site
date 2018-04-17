@@ -1,11 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import Foundation from "../foundation/Foundation";
-
-const { Cell, Row } = Foundation;
-
-// import { Cell, Row } from "../foundation/Foundation";
+import { Cell, Row } from "../foundation/Foundation";
 
 const Container = ({ mainContent, leftContent, rightContent }) => (
   <article className="grid-container">

@@ -1,8 +1,6 @@
 import React from "react";
 
-import Foundation from "../foundation/Foundation";
-
-const { Button } = Foundation;
+import { Button } from "../foundation/Foundation";
 
 const ArticleNavigation = () => (
   <div>

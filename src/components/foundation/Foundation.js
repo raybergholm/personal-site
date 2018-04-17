@@ -5,9 +5,9 @@ import Label from "./Label";
 import Menu from "./Menu";
 import MenuItem from "./MenuItem";
 import TopBar from "./TopBar";
-import XyGrid from "./XyGrid";
+import { GridContainer, Cell, Row, Col } from "./XyGrid";
 
-const Foundation = {
+export {
   Button,
   Callout,
   Card,
@@ -15,7 +15,8 @@ const Foundation = {
   Menu,
   MenuItem,
   TopBar,
-  ...XyGrid
+  GridContainer,
+  Cell,
+  Row,
+  Col
 };
-
-export default Foundation;

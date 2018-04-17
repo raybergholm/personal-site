@@ -11,8 +11,8 @@ const Callout = ({ children, ...props }) => (
 
 Callout.propTypes = {
   children: PropTypes.oneOfType(
-      PropTypes.object,
-      PropTypes.array
+    PropTypes.object,
+    PropTypes.array
   )
 };
 

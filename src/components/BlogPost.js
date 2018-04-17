@@ -1,11 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import Foundation from "./foundation/Foundation";
+import { Label } from "./foundation/Foundation";
 
 import Showdown from "showdown";
-
-const { Label } = Foundation;
 
 const ARTICLE_ROOT_URL = "/blog/article/";
 
