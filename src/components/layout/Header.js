@@ -1,6 +1,6 @@
 import React from "react";
 
-import Foundation from "../foundation/Foundation";
+import { Callout, Sticky } from "../foundation/Foundation";
 
 import Navbar from "./Navbar";
 
@@ -15,12 +15,24 @@ const stickyBarStyle = {
   width: "100%"
 };
 
+const bannerStyle = {
+  height: "100px",
+  "text-align": "center"
+};
+
+const stickyConfig = {
+  "data-options": "marginTop:0;",
+  "data-top-anchor": "1"
+};
+
 const Header = () => (
   <header id="app-header" data-sticky-container>
-    <div className="sticky" style={stickyBarStyle} data-sticky data-options="marginTop:0;" data-top-anchor="1">
+    <Sticky style={stickyBarStyle} stickyConfig={stickyConfig}>
       <Navbar brand={brand} items={navbarItems} />
-    </div>
-    
+    </Sticky>
+    <Callout id="app-header-banner" style={bannerStyle}>
+      <p>mostly abnormal.</p>
+    </Callout>
   </header>
 );
 
