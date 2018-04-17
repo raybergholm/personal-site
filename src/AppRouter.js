@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 
 import HomePage from "./pages/Home";
+import PortfolioPage from "./pages/PortfolioPage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 
@@ -13,6 +14,7 @@ const AppRouter = () => (
   <BrowserRouter>
     <Switch>
       <Route exact path="/" component={HomePage} />
+      <Route path="/portfolio" component={PortfolioPage} />
       <Route path="/about" component={AboutPage} />
       <Route path="/contact" component={ContactPage} />
       <Route exact path="/blog" component={BlogFeedPage} />
