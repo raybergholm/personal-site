@@ -4,6 +4,7 @@
         "title": "First post",
         "timestamp": "01.04.2018",
         "author": "Bob",
+        "tags" : ["Life", "Hi", "Placeholder"],
         "body": "**I am testing** if _markdown_ is active."
     },
     {
@@ -12,6 +13,7 @@
         "title": "Second post",
         "timestamp": "02.04.2018",
         "author": "Bob",
+        "tags" : ["Life", "Placeholder"],
         "body": "Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus."
     },
     {
@@ -20,6 +22,7 @@
         "title": "Third post",
         "timestamp": "03.04.2018",
         "author": "Bob",
+        "tags" : ["Food", "Placeholder"],
         "body": "Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus."
     },
     {
@@ -28,6 +31,7 @@
         "title": "Fourth post",
         "timestamp": "04.04.2018",
         "author": "Bob",
+        "tags" : ["Bob", "Placeholder"],
         "body": "Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus."
     },
     {
@@ -36,6 +40,7 @@
         "title": "Fifth post",
         "timestamp": "05.04.2018",
         "author": "Bob",
+        "tags" : ["Placeholder"],
         "body": "Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus."
     }
 ]
