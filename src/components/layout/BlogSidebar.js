@@ -1,11 +1,13 @@
 import React from "react";
 
+import QuickLinksMenu from "./sidebar/QuickLinksMenu";
 import ArchiveMenu from "./sidebar/ArchiveMenu";
 import SearchPanel from "./sidebar/SearchPanel";
 
 import { Sticky } from "../foundation/Foundation";
 
-import sidebarEntries from "../../config/sidebarEntries.json";
+import quickLinks from "../../config/quickLinks.json";
+import archiveLinks from "../../config/archiveLinks.json";
 
 const stickyConfig = {
   "data-options": "marginTop:4;",
@@ -17,7 +19,8 @@ const BlogSidebar = () => (
   <menu data-sticky-container>
     <Sticky stickyConfig={stickyConfig}>
       <SearchPanel action={null} />
-      <ArchiveMenu items={sidebarEntries} />
+      <QuickLinksMenu items={quickLinks} />
+      <ArchiveMenu items={archiveLinks} />
     </Sticky>
   </menu>
 );
