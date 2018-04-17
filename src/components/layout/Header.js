@@ -14,8 +14,8 @@ const stickyBarStyle = {
 };
 
 const Header = () => (
-  <header data-sticky-container>
-    <div className="sticky" data-sticky data-options="marginTop:0;" style={stickyBarStyle} data-top-anchor="1">
+  <header id="app-header" data-sticky-container>
+    <div className="sticky" style={stickyBarStyle} data-sticky data-options="marginTop:0;" data-top-anchor="1">
       <Navbar brand={brand} items={navbarItems} />
     </div>
   </header>
