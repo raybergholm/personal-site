@@ -1,18 +1,16 @@
 import React from "react";
 
-import Foundation from "../foundation/Foundation";
+import ArchiveMenu from "./sidebar/ArchiveMenu";
+import SearchPanel from "./sidebar/SearchPanel";
 
 import sidebarEntries from "../../config/sidebarEntries.json";
 
-const { Menu } = Foundation;
 
 const BlogSidebar = () => (
   <menu data-sticky-container>
     <div data-sticky>
-      <h4>Search</h4>
-      <input placeholder="search..." />
-      <h4>Archives</h4>
-      <Menu items={sidebarEntries} vertical={true} />
+      <SearchPanel action={null} />
+      <ArchiveMenu items={sidebarEntries} />
     </div>
   </menu>
 );
