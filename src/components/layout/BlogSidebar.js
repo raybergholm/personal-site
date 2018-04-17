@@ -11,7 +11,7 @@ import archiveLinks from "../../config/archiveLinks.json";
 
 const stickyConfig = {
   "data-options": "marginTop:4;",
-  "data-top-anchor": "app-header-banner:bottom",
+  "data-top-anchor": "app-header:bottom",
   "data-bottom-anchor": "app-footer:top"
 };
 
