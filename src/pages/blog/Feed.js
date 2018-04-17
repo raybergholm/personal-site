@@ -15,7 +15,7 @@ const fetchMockContent = () => {
 };
 
 const Page = () => (
-  <div>
+  <div id="main-content-section">
     <FlexColumnContainer {...fetchMockContent()} />
   </div>
 );

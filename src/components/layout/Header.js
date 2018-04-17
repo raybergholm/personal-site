@@ -9,9 +9,15 @@ const brand = {
   menuText: true
 };
 
+const stickyBarStyle = {
+  width: "100%"
+};
+
 const Header = () => (
-  <header>
-    <Navbar brand={brand} items={navbarItems} />
+  <header data-sticky-container>
+    <div className="sticky" data-sticky data-options="marginTop:0;" style={stickyBarStyle} data-top-anchor="1">
+      <Navbar brand={brand} items={navbarItems} />
+    </div>
   </header>
 );
 

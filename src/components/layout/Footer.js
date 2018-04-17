@@ -1,7 +1,7 @@
 import React from "react";
 
 const Footer = () => (
-  <footer className="App-footer">
+  <footer id="footer-section" className="app-footer">
   </footer>
 );
 

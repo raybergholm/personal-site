@@ -30,7 +30,9 @@ const fetchContent = (articleId) => ({
 });
 
 const Page = ({match}) => (
-  <FlexColumnContainer {...fetchContent(match.params.articleId)} />
+  <div id="main-content-section">
+    <FlexColumnContainer {...fetchContent(match.params.articleId)} />
+  </div>
 );
 
 Page.propTypes = {
