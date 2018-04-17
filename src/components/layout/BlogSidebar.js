@@ -9,6 +9,8 @@ const { Menu } = Foundation;
 const BlogSidebar = () => (
   <menu data-sticky-container>
     <div data-sticky>
+      <h4>Search</h4>
+      <input placeholder="search..." />
       <h4>Archives</h4>
       <Menu items={sidebarEntries} vertical={true} />
     </div>
