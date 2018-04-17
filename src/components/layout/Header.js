@@ -16,8 +16,11 @@ const stickyBarStyle = {
 };
 
 const bannerStyle = {
-  height: "100px",
-  "text-align": "center"
+  height: "200px",
+  "font-family": "\"Courier New\", Courier, monospace",
+  "text-align": "center",
+  "vertical-align": "middle",
+  "line-height": "normal"
 };
 
 const stickyConfig = {
@@ -25,14 +28,17 @@ const stickyConfig = {
   "data-top-anchor": "1"
 };
 
+const Banner = () => (
+  <Callout id="app-header-banner" style={bannerStyle}>
+    <span>mostly normal.</span>
+  </Callout>
+);
+
 const Header = () => (
   <header id="app-header" data-sticky-container>
     <Sticky style={stickyBarStyle} stickyConfig={stickyConfig}>
       <Navbar brand={brand} items={navbarItems} />
     </Sticky>
-    <Callout id="app-header-banner" style={bannerStyle}>
-      <p>mostly abnormal.</p>
-    </Callout>
   </header>
 );
 
