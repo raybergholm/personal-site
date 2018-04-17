@@ -1,4 +1,5 @@
 import Button from "./Button";
+import Callout from "./Callout";
 import Card from "./Card";
 import Label from "./Label";
 import Menu from "./Menu";
@@ -8,6 +9,7 @@ import XyGrid from "./XyGrid";
 
 const Foundation = {
   Button,
+  Callout,
   Card,
   Label,
   Menu,
