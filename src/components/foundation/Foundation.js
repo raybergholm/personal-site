@@ -4,6 +4,7 @@ import Card from "./Card";
 import Label from "./Label";
 import Menu from "./Menu";
 import MenuItem from "./MenuItem";
+import OffCanvas from "./OffCanvas";
 import Pagination from "./Pagination";
 import Sticky from "./Sticky";
 import TopBar from "./TopBar";
@@ -19,6 +20,7 @@ export {
   Label,
   Menu,
   MenuItem,
+  OffCanvas,
   Pagination,
   Row,
   Sticky,
