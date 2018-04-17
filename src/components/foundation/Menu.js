@@ -39,15 +39,17 @@ const createMenuClassName = ({ simple, vertical, alignMiddle, alignRight, icons,
   return generateClassName("menu", props);
 };
 
-const Menu = ({ items, ...props }) => (
-  <ul className={createMenuClassName(props)}>
+const Menu = ({ id, style, items, ...props }) => (
+  <ul id={id || null} style={style|| null} className={createMenuClassName(props)}>
     {items.map(({ link, text, ...rest }, index) => (<MenuItem key={index} link={link} text={text} {...rest} />))}
   </ul>
 );
 
 Menu.propTypes = {
+  id: PropTypes.string,
   items: PropTypes.arrayOf(PropTypes.object),
-  selected: PropTypes.object
+  selected: PropTypes.object,
+  style: PropTypes.object
 };
 
 export default Menu;

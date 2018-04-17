@@ -71,20 +71,20 @@ const generateColClassName = ({ margin, collapse }) => {
 
 // Component constructors
 
-export const GridContainer = ({ children, ...props }) => (
-  <article className={generateGridContainerClassName(props)}>{children}</article>
+export const GridContainer = ({ id, style, children, ...props }) => (
+  <article id={id || null} style={style|| null} className={generateGridContainerClassName(props)}>{children}</article>
 );
 
-export const Cell = ({ children, ...props }) => (
-  <div className={generateCellClassName(props)}>{children}</div>
+export const Cell = ({ id, style, children, ...props }) => (
+  <div id={id || null} style={style|| null} className={generateCellClassName(props)}>{children}</div>
 );
 
-export const Row = ({ children, ...props }) => (
-  <div className={generateRowClassName(props)}>{children}</div>
+export const Row = ({ id, style, children, ...props }) => (
+  <div id={id || null} style={style|| null} className={generateRowClassName(props)}>{children}</div>
 );
 
-export const Col = ({ children, ...props }) => (
-  <div className={generateColClassName(props)}>{children}</div>
+export const Col = ({ id, style, children, ...props }) => (
+  <div id={id || null} style={style|| null} className={generateColClassName(props)}>{children}</div>
 );
 
 export default {
@@ -100,26 +100,34 @@ GridContainer.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.object,
     PropTypes.array
-  ])
+  ]),
+  id: PropTypes.string,
+  style: PropTypes.object
 };
 
 Cell.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.object,
     PropTypes.array
-  ])
+  ]),
+  id: PropTypes.string,
+  style: PropTypes.object
 };
 
 Row.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.object,
     PropTypes.array
-  ])
+  ]),
+  id: PropTypes.string,
+  style: PropTypes.object
 };
 
 Col.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.object,
     PropTypes.array
-  ])
+  ]),
+  id: PropTypes.string,
+  style: PropTypes.object
 };

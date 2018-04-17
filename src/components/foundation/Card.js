@@ -3,34 +3,40 @@ import PropTypes from "prop-types";
 
 import { generateClassName } from "./utils";
 
-const Card = ({ children, ...props }) => (
-  <div className={generateClassName("card", props)}>
+const Card = ({ id, style, children, ...props }) => (
+  <div id={id || null} style={style|| null} className={generateClassName("card", props)}>
     {children}
   </div>
 );
 
-const CardDivider = ({ children, ...props }) => (
-  <div className={generateClassName("card-divider", props)}>
+const CardDivider = ({ id, style, children, ...props }) => (
+  <div id={id || null} style={style|| null} className={generateClassName("card-divider", props)}>
     {children}
   </div>
 );
 
-const CardSection = ({ children, ...props }) => (
-  <div className={generateClassName("card-section", props)}>
+const CardSection = ({ id, style, children, ...props }) => (
+  <div id={id || null} style={style|| null} className={generateClassName("card-section", props)}>
     {children}
   </div>
 );
 
 Card.propTypes = {
-  children: PropTypes.object
+  children: PropTypes.object,
+  id: PropTypes.string,
+  style: PropTypes.object
 };
 
 CardDivider.propTypes = {
-  children: PropTypes.object
+  children: PropTypes.object,
+  id: PropTypes.string,
+  style: PropTypes.object
 };
 
 CardSection.propTypes = {
-  children: PropTypes.object
+  children: PropTypes.object,
+  id: PropTypes.string,
+  style: PropTypes.object
 };
 
 const exportObj = Card;

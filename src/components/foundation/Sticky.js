@@ -3,13 +3,15 @@ import PropTypes from "prop-types";
 
 import { generateClassName } from "./utils";
 
-const Callout = ({ id, style, children, ...props }) => (
-  <div id={id || null} style={style || null} className={generateClassName("callout", props)}>
+
+
+const Sticky = ({ id, style, children, ...props }) => (
+  <div id={id} style={style} data-sticky className={generateClassName("callout", props)}>
     {children}
   </div>
 );
 
-Callout.propTypes = {
+Sticky.propTypes = {
   children: PropTypes.oneOfType(
     PropTypes.object,
     PropTypes.array
@@ -18,4 +20,4 @@ Callout.propTypes = {
   style: PropTypes.object
 };
 
-export default Callout;
+export default Sticky;
