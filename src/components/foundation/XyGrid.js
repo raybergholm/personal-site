@@ -41,11 +41,15 @@ const generateCellClassName = ({ small, medium, large, auto, shrink }) => {
   return generateClassName("cell", props);
 };
 
-const generateRowClassName = ({ margin, collapse }) => {
+const generateRowClassName = ({ margin, padding, collapse }) => {
   const props = [];
 
   if (margin) {
     props.push("grid-margin-x");
+  }
+
+  if (padding) {
+    props.push("grid-padding-x");
   }
 
   if (collapse) {
@@ -55,11 +59,15 @@ const generateRowClassName = ({ margin, collapse }) => {
   return generateClassName("grid-x", props);
 };
 
-const generateColClassName = ({ margin, collapse }) => {
+const generateColClassName = ({ margin, padding, collapse }) => {
   const props = [];
 
   if (margin) {
     props.push("grid-margin-y");
+  }
+
+  if (padding) {
+    props.push("grid-padding-y");
   }
 
   if (collapse) {
@@ -72,19 +80,19 @@ const generateColClassName = ({ margin, collapse }) => {
 // Component constructors
 
 export const GridContainer = ({ id, style, children, ...others }) => (
-  <article id={id || null} style={style|| null} className={generateGridContainerClassName(others)}>{children}</article>
+  <article id={id || null} style={style || null} className={generateGridContainerClassName(others)}>{children}</article>
 );
 
 export const Cell = ({ id, style, children, ...others }) => (
-  <div id={id || null} style={style|| null} className={generateCellClassName(others)}>{children}</div>
+  <div id={id || null} style={style || null} className={generateCellClassName(others)}>{children}</div>
 );
 
 export const Row = ({ id, style, children, ...others }) => (
-  <div id={id || null} style={style|| null} className={generateRowClassName(others)}>{children}</div>
+  <div id={id || null} style={style || null} className={generateRowClassName(others)}>{children}</div>
 );
 
 export const Col = ({ id, style, children, ...others }) => (
-  <div id={id || null} style={style|| null} className={generateColClassName(others)}>{children}</div>
+  <div id={id || null} style={style || null} className={generateColClassName(others)}>{children}</div>
 );
 
 export default {
