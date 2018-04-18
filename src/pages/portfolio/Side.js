@@ -3,12 +3,12 @@ import React from "react";
 import { Col, Cell } from "../../components/foundation/Foundation";
 
 const colStyle = {
-  "background-color": "#EEEEEE"
+  "background-color": "#F0F0F0"
 };
 
 const Side = () => (
   <Col style={colStyle}>
-    <Cell >
+    <Cell shrink>
       <img className="thumbnail" src="https://placehold.it/550x350" />
     </Cell>
     <Cell>
