@@ -3,20 +3,20 @@ import PropTypes from "prop-types";
 
 import { generateClassName } from "./utils";
 
-const Card = ({ id, style, children, ...props }) => (
-  <div id={id || null} style={style|| null} className={generateClassName("card", props)}>
+export const Card = ({ id, style, children, ...others }) => (
+  <div id={id || null} style={style|| null} className={generateClassName("card", others)}>
     {children}
   </div>
 );
 
-const CardDivider = ({ id, style, children, ...props }) => (
-  <div id={id || null} style={style|| null} className={generateClassName("card-divider", props)}>
+export const CardDivider = ({ id, style, children, ...others }) => (
+  <div id={id || null} style={style|| null} className={generateClassName("card-divider", others)}>
     {children}
   </div>
 );
 
-const CardSection = ({ id, style, children, ...props }) => (
-  <div id={id || null} style={style|| null} className={generateClassName("card-section", props)}>
+export const CardSection = ({ id, style, children, ...others }) => (
+  <div id={id || null} style={style|| null} className={generateClassName("card-section", others)}>
     {children}
   </div>
 );

@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 
 import { generateClassName } from "./utils";
 
-const Label = ({ id, style, text, ...props }) => (
-    <div id={id || null} style={style|| null} className={generateClassName("label", props)}>{text}</div>
+const Label = ({ id, style, text, ...others }) => (
+    <div id={id || null} style={style|| null} className={generateClassName("label", others)}>{text}</div>
 );
 
 Label.propTypes = {

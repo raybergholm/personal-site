@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Pagination = ({ id, style, settings, ...props }) => {
+const Pagination = ({ id, style, settings, ...others }) => {
   const { currentIndex, pageCount, visibleRange } = settings;
 
   const enabledPreviousButton = currentIndex > 1;

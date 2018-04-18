@@ -71,20 +71,20 @@ const generateColClassName = ({ margin, collapse }) => {
 
 // Component constructors
 
-export const GridContainer = ({ id, style, children, ...props }) => (
-  <article id={id || null} style={style|| null} className={generateGridContainerClassName(props)}>{children}</article>
+export const GridContainer = ({ id, style, children, ...others }) => (
+  <article id={id || null} style={style|| null} className={generateGridContainerClassName(others)}>{children}</article>
 );
 
-export const Cell = ({ id, style, children, ...props }) => (
-  <div id={id || null} style={style|| null} className={generateCellClassName(props)}>{children}</div>
+export const Cell = ({ id, style, children, ...others }) => (
+  <div id={id || null} style={style|| null} className={generateCellClassName(others)}>{children}</div>
 );
 
-export const Row = ({ id, style, children, ...props }) => (
-  <div id={id || null} style={style|| null} className={generateRowClassName(props)}>{children}</div>
+export const Row = ({ id, style, children, ...others }) => (
+  <div id={id || null} style={style|| null} className={generateRowClassName(others)}>{children}</div>
 );
 
-export const Col = ({ id, style, children, ...props }) => (
-  <div id={id || null} style={style|| null} className={generateColClassName(props)}>{children}</div>
+export const Col = ({ id, style, children, ...others }) => (
+  <div id={id || null} style={style|| null} className={generateColClassName(others)}>{children}</div>
 );
 
 export default {

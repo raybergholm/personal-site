@@ -17,8 +17,8 @@ const createMenuItemClassName = ({ menuText, isActive }) => {
   return name;
 };
 
-const MenuItem = ({ id, style, link, text, ...props }) => (
-  <li id={id || null} style={style|| null} className={createMenuItemClassName(props)}>
+const MenuItem = ({ id, style, link, text, ...others }) => (
+  <li id={id || null} style={style|| null} className={createMenuItemClassName(others)}>
     {link ? <a href={link}>{text}</a> : text}
   </li>
 );
