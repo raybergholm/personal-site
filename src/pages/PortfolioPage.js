@@ -1,12 +1,14 @@
 import React from "react";
 
-import FlexColumnContainer from "../components/layout/FlexColumnContainer";
+import TwoColumnLeftContainer from "../components/layout/TwoColumnRightContainer";
 
 import Main from "./portfolio/Main";
 import Side from "./portfolio/Side";
 
 const Page = () => (
-  <FlexColumnContainer full mainContent={<Main />} leftContent={<Side />} />
+  <TwoColumnLeftContainer id="main-content-section" side={<Side />} full>
+    <Main />
+  </TwoColumnLeftContainer>
 );
 
 export default Page;

@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import FlexColumnContainer from "../../components/layout/FlexColumnContainer";
+import TwoColumnRightContainer from "../../components/layout/TwoColumnRightContainer";
 import ArticleNavigation from "../../components/layout/ArticleNavigation";
 import BlogPost from "../../components/BlogPost";
 import BlogSidebar from "../../components/layout/BlogSidebar";
@@ -24,15 +24,10 @@ const getMainContent = (articleId) => (
   </div>
 );
 
-const fetchContent = (articleId) => ({
-  mainContent: getMainContent(articleId),
-  rightContent: (<BlogSidebar />)
-});
-
 const Page = ({match}) => (
-  <div id="main-content-section">
-    <FlexColumnContainer {...fetchContent(match.params.articleId)} />
-  </div>
+  <TwoColumnRightContainer id="main-content-section" side={<BlogSidebar />}>
+    {getMainContent(match.params.articleId)}
+  </TwoColumnRightContainer>
 );
 
 Page.propTypes = {

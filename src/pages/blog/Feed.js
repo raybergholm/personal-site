@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 import { Pagination } from "../../components/foundation/Foundation";
 
-import FlexColumnContainer from "../../components/layout/FlexColumnContainer";
+import TwoColumnRightContainer from "../../components/layout/TwoColumnRightContainer";
 import BlogPost from "../../components/BlogPost";
 import BlogSidebar from "../../components/layout/BlogSidebar";
 
@@ -11,7 +11,7 @@ import mockPosts from "../../config/mockPosts.json";
 
 const getPageNumber = (params) => params.pageNumber;
 
-const fetchMockContent = () => {
+const fetchMainContent = () => {
   const posts = mockPosts.map((props) => (<BlogPost key={props._id} {...props} />));
   
   const paginationSettings = {
@@ -19,16 +19,14 @@ const fetchMockContent = () => {
     pageCount: 12
   };
   const pagination = (<Pagination settings={paginationSettings} />);
-  return {
-    mainContent: [posts, pagination],
-    rightContent: (<BlogSidebar />)
-  };
+
+  return [posts, pagination];
 };
 
 const Page = ({match}) => (
-  <div id="main-content-section">
-    <FlexColumnContainer {...fetchMockContent()} />
-  </div>
+  <TwoColumnRightContainer id="main-content-section" side={<BlogSidebar />}>
+    {fetchMainContent()}
+  </TwoColumnRightContainer>
 );
 
 Page.propTypes = {
