@@ -7,9 +7,11 @@ const columnStyle = {
 };
 
 const Main = () => (
-  <div>
-    <p>Main section</p>
-  </div>
+<Col style={columnStyle}>
+    <Cell auto>
+      <p>This is the main section</p>
+    </Cell>
+  </Col>
 );
 
 export default Main;

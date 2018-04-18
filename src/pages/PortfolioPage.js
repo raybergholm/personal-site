@@ -1,14 +1,12 @@
 import React from "react";
 
-import { OffCanvas } from "../components/foundation/Foundation";
+import FlexColumnContainer from "../components/layout/FlexColumnContainer";
 
 import Main from "./portfolio/Main";
 import Side from "./portfolio/Side";
 
 const Page = () => (
-  <OffCanvas direction="left" 
-    mainContent={<Main />}
-    sideContent={<Side />}/>
+  <FlexColumnContainer  mainContent={<Main />} leftContent={<Side />} />
 );
 
 export default Page;
