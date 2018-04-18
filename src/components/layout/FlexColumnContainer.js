@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 
 import { GridContainer, Cell, Row } from "../foundation/Foundation";
 
-const Container = ({ mainContent, leftContent, rightContent }) => (
-  <GridContainer>
+const Container = ({ mainContent, leftContent, rightContent, ...others }) => (
+  <GridContainer {...others}>
     {leftContent && rightContent && (
       <Row>
         <Cell medium={2} large={3}>{leftContent}</Cell>
