@@ -19,6 +19,10 @@ const contactFormPlaceholders = {
   message: "Your message..."
 };
 
+const onSubmit = () => {
+
+};
+
 const Main = () => (
   <Col>
     <Cell>
@@ -32,7 +36,7 @@ const Main = () => (
     <Cell>
       <hr />
       <p>Some contact info or the like</p>
-      <ContactForm labels={contactFormLabels} placeholders={contactFormPlaceholders} />
+      <ContactForm _id="portfolioContactForm" labels={contactFormLabels} placeholders={contactFormPlaceholders} submitAction={onSubmit} />
     </Cell>
   </Col>
 );
