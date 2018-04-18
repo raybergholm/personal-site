@@ -2,16 +2,16 @@ import React from "react";
 
 import { Col, Cell } from "../../components/foundation/Foundation";
 
-const columnStyle = {
-  height: "100%"
+const colStyle = {
+  "background-color": "#EEEEEE"
 };
 
 const Side = () => (
-  <Col style={columnStyle}>
-    <Cell shrink>
+  <Col style={colStyle}>
+    <Cell >
       <img className="thumbnail" src="https://placehold.it/550x350" />
     </Cell>
-    <Cell auto>
+    <Cell>
       <h5>Ray Bergholm</h5>
       <p>I develop stuff.</p>
     </Cell>

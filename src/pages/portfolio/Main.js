@@ -2,13 +2,9 @@ import React from "react";
 
 import { Col, Cell } from "../../components/foundation/Foundation";
 
-const columnStyle = {
-  height: "100%"
-};
-
 const Main = () => (
-<Col style={columnStyle}>
-    <Cell auto>
+  <Col>
+    <Cell>
       <p>This is the main section</p>
     </Cell>
   </Col>

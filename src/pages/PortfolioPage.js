@@ -6,7 +6,7 @@ import Main from "./portfolio/Main";
 import Side from "./portfolio/Side";
 
 const Page = () => (
-  <FlexColumnContainer  mainContent={<Main />} leftContent={<Side />} />
+  <FlexColumnContainer full mainContent={<Main />} leftContent={<Side />} />
 );
 
 export default Page;
