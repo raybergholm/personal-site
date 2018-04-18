@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { Cell, Row } from "../foundation/Foundation";
+import { GridContainer, Cell, Row } from "../foundation/Foundation";
 
 const Container = ({ mainContent, leftContent, rightContent }) => (
-  <article className="grid-container">
+  <GridContainer>
     {leftContent && rightContent && (
       <Row>
         <Cell medium={2} large={3}>{leftContent}</Cell>
@@ -29,7 +29,7 @@ const Container = ({ mainContent, leftContent, rightContent }) => (
         <Cell auto>{mainContent}</Cell>
       </Row>
     )}
-  </article>
+  </GridContainer>
 );
 
 Container.propTypes = {
