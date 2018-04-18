@@ -1,6 +1,6 @@
 import React from "react";
 
-import TwoColumnLeftContainer from "../components/layout/TwoColumnRightContainer";
+import TwoColumnLeftContainer from "../components/layout/TwoColumnLeftContainer";
 
 import Main from "./portfolio/Main";
 import Side from "./portfolio/Side";
