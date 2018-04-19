@@ -21,6 +21,8 @@ export const CardSection = ({ id, style, children, ...others }) => (
   </div>
 );
 
+export default Card;
+
 Card.propTypes = {
   children: PropTypes.object,
   id: PropTypes.string,
@@ -38,9 +40,3 @@ CardSection.propTypes = {
   id: PropTypes.string,
   style: PropTypes.object
 };
-
-const exportObj = Card;
-exportObj.Divider = CardDivider;
-exportObj.Section = CardSection;
-
-export default exportObj;

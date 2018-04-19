@@ -9,6 +9,8 @@ const Callout = ({ id, style, children, ...others }) => (
   </div>
 );
 
+export default Callout;
+
 Callout.propTypes = {
   children: PropTypes.oneOfType(
     PropTypes.object,
@@ -17,5 +19,3 @@ Callout.propTypes = {
   id: PropTypes.string,
   style: PropTypes.object
 };
-
-export default Callout;

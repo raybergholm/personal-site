@@ -45,11 +45,11 @@ const Menu = ({ id, style, items, ...others }) => (
   </ul>
 );
 
+export default Menu;
+
 Menu.propTypes = {
   id: PropTypes.string,
   items: PropTypes.arrayOf(PropTypes.object),
   selected: PropTypes.object,
   style: PropTypes.object
 };
-
-export default Menu;

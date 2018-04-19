@@ -12,6 +12,8 @@ const OffCanvas = ({ ids = {}, styles = {}, direction = "left", mainContent, sid
     </div>
 );
 
+export default OffCanvas;
+
 OffCanvas.propTypes = {
     ids: PropTypes.string,
     direction: PropTypes.string,
@@ -25,7 +27,5 @@ OffCanvas.propTypes = {
     ),
     styles: PropTypes.object
 };
-
-export default OffCanvas;
 
 

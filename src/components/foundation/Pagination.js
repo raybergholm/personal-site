@@ -22,6 +22,8 @@ const Pagination = ({ id, style, settings, ...others }) => {
   </nav>);
 };
 
+export default Pagination;
+
 Pagination.propTypes = {
   children: PropTypes.oneOfType(
     PropTypes.object,
@@ -31,5 +33,3 @@ Pagination.propTypes = {
   settings: PropTypes.object,
   style: PropTypes.object
 };
-
-export default Pagination;

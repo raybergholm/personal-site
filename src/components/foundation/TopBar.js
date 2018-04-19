@@ -12,6 +12,8 @@ const TopBar = ({ id, style, left, right }) => (
   </nav>
 );
 
+export default TopBar;
+
 TopBar.propTypes = {
   id: PropTypes.string,
   left: PropTypes.oneOfType(
@@ -24,5 +26,3 @@ TopBar.propTypes = {
   ),
   style: PropTypes.object
 };
-
-export default TopBar;

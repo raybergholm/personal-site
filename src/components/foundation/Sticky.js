@@ -9,6 +9,8 @@ const Sticky = ({ id, style, stickyConfig, children, ...others }) => (
   </div>
 );
 
+export default Sticky;
+
 Sticky.propTypes = {
   children: PropTypes.oneOfType(
     PropTypes.object,
@@ -18,5 +20,3 @@ Sticky.propTypes = {
   stickyConfig: PropTypes.object,
   style: PropTypes.object
 };
-
-export default Sticky;

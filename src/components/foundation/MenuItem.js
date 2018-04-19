@@ -23,6 +23,8 @@ const MenuItem = ({ id, style, link, text, ...others }) => (
   </li>
 );
 
+export default MenuItem;
+
 MenuItem.propTypes = {
   children: PropTypes.object,
   id: PropTypes.string,
@@ -30,5 +32,3 @@ MenuItem.propTypes = {
   style: PropTypes.object,
   text: PropTypes.string
 };
-
-export default MenuItem;
