@@ -17,16 +17,10 @@ const fetchArticle = (articleId) => {
   return post ? <BlogPost key={post._id} {...post} /> : null;
 };
 
-const getMainContent = (articleId) => (
-  <div>
-    <ArticleNavigation />
-    {fetchArticle(articleId)}
-  </div>
-);
-
 const Page = ({match}) => (
   <TwoColumnRightContainer id="main-content-section" side={<BlogSidebar />}>
-    {getMainContent(match.params.articleId)}
+    <ArticleNavigation />
+    {fetchArticle(match.params.articleId)}
   </TwoColumnRightContainer>
 );
 
