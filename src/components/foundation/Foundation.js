@@ -1,14 +1,14 @@
-import Button from "./Button";
-import Callout from "./Callout";
-import Card from "./Card";
-import Label from "./Label";
-import Menu from "./Menu";
-import MenuItem from "./MenuItem";
-import OffCanvas from "./OffCanvas";
-import Pagination from "./Pagination";
-import Sticky from "./Sticky";
-import TopBar from "./TopBar";
-import { GridContainer, Cell, Row, Col } from "./XyGrid";
+import Button from "./components/Button";
+import Callout from "./components/Callout";
+import Card from "./components/Card";
+import Label from "./components/Label";
+import Menu from "./components/Menu";
+import MenuItem from "./components/MenuItem";
+import OffCanvas from "./components/OffCanvas";
+import Pagination from "./components/Pagination";
+import Sticky from "./components/Sticky";
+import TopBar from "./components/TopBar";
+import { GridContainer, Cell, Row, Col } from "./components/XyGrid";
 
 export {
   Button,
