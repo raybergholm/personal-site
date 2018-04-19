@@ -5,42 +5,43 @@ import { generateClassName } from "./utils";
 
 import MenuItem from "./MenuItem";
 
-const createMenuClassName = ({ simple, vertical, alignMiddle, alignRight, icons, iconTop, iconBottom, iconLeft, iconRight }) => {
-  const props = [];
+const buildClassName = ({ simple, vertical, alignMiddle, alignRight, icons, iconTop, iconBottom, iconLeft, iconRight }) => {
+  const BASE_CLASSNAME = "menu";
+  const tokens = [BASE_CLASSNAME];
 
   if (simple) {
-    props.push("full");
+    tokens.push("full");
   }
 
   if (vertical) {
-    props.push("vertical");
+    tokens.push("vertical");
 
     if (alignMiddle) {
-      props.push("align-middle");
+      tokens.push("align-middle");
     } else if (alignRight) {
-      props.push("align-right");
+      tokens.push("align-right");
     }
   }
 
-  if (icons) {
-    props.push("icons");
+  if (icons && (iconTop || iconBottom || iconLeft || iconRight)) {
+    tokens.push("icons");
 
     if (iconTop) {
-      props.push("icon-top");
+      tokens.push("icon-top");
     } else if (iconBottom) {
-      props.push("icon-bottom");
+      tokens.push("icon-bottom");
     } else if (iconLeft) {
-      props.push("icon-left");
+      tokens.push("icon-left");
     } else if (iconRight) {
-      props.push("icon-right");
+      tokens.push("icon-right");
     }
   }
 
-  return generateClassName("menu", props);
+  return generateClassName(tokens);
 };
 
 const Menu = ({ id, style, items, ...others }) => (
-  <ul id={id || null} style={style|| null} className={createMenuClassName(others)}>
+  <ul id={id || null} style={style|| null} className={buildClassName(others)}>
     {items.map(({ link, text, ...others }, index) => (<MenuItem key={index} link={link} text={text} {...others} />))}
   </ul>
 );

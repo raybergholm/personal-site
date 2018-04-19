@@ -3,8 +3,12 @@ import PropTypes from "prop-types";
 
 import { generateClassName } from "./utils";
 
-const Sticky = ({ id, style, stickyConfig, children, ...others }) => (
-  <div id={id} style={style} data-sticky {...stickyConfig} className={generateClassName("sticky", others)}>
+const configureSticky = (stickyConfig) => {
+
+};
+
+const Sticky = ({ id, style, config, children, ...others }) => (
+  <div id={id} style={style} data-sticky {...configureSticky(config)} className={generateClassName("sticky", others)}>
     {children}
   </div>
 );
@@ -16,7 +20,7 @@ Sticky.propTypes = {
     PropTypes.object,
     PropTypes.array
   ),
+  config: PropTypes.object,
   id: PropTypes.string,
-  stickyConfig: PropTypes.object,
   style: PropTypes.object
 };

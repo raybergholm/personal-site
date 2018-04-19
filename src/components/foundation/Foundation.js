@@ -1,19 +1,26 @@
 import Button from "./components/Button";
 import Callout from "./components/Callout";
 import Card from "./components/Card";
+import CardDivider from "./components/CardDivider";
+import CardSection from "./components/CardSection";
+import Cell from "./components/Cell";
+import Col from "./components/Col";
+import GridContainer from "./components/GridContainer";
 import Label from "./components/Label";
 import Menu from "./components/Menu";
 import MenuItem from "./components/MenuItem";
 import OffCanvas from "./components/OffCanvas";
 import Pagination from "./components/Pagination";
+import Row from "./components/Col";
 import Sticky from "./components/Sticky";
 import TopBar from "./components/TopBar";
-import { GridContainer, Cell, Row, Col } from "./components/XyGrid";
 
 export {
   Button,
   Callout,
   Card,
+  CardDivider,
+  CardSection,
   Cell,
   Col,
   GridContainer,

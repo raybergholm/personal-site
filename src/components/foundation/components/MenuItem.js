@@ -3,22 +3,21 @@ import PropTypes from "prop-types";
 
 import { generateClassName } from "./utils";
 
-const createMenuItemClassName = ({ menuText, isActive }) => {
-  const props = [];
+const buildClassName = ({ menuText, isActive }) => {
+  const tokens = [];
 
   if (menuText) {
-    props.push("menu-text");
+    tokens.push("menu-text");
   }
   if (isActive) {
-    props.push("is-active");
+    tokens.push("is-active");
   }
 
-  const name = generateClassName("", props);
-  return name;
+  return generateClassName(tokens);
 };
 
 const MenuItem = ({ id, style, link, text, ...others }) => (
-  <li id={id || null} style={style|| null} className={createMenuItemClassName(others)}>
+  <li id={id || null} style={style|| null} className={buildClassName(others)}>
     {link ? <a href={link}>{text}</a> : text}
   </li>
 );

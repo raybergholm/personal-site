@@ -1,17 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const BASE_CLASSNAME = "card";
+const BASE_CLASSNAME = "card-section";
 
-export const Card = ({ id, style, children }) => (
+export const CardSection = ({ id, style, children }) => (
   <div id={id || null} style={style || null} className={BASE_CLASSNAME}>
     {children}
   </div>
 );
 
-export default Card;
+export default CardSection;
 
-Card.propTypes = {
+CardSection.propTypes = {
   children: PropTypes.object,
   id: PropTypes.string,
   style: PropTypes.object
