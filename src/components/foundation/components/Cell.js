@@ -3,32 +3,33 @@ import PropTypes from "prop-types";
 
 import { generateClassName } from "./utils";
 
-const generateCellClassName = ({ small, medium, large, auto, shrink }) => {
-  const props = [];
+const buildClassName = ({ small, medium, large, auto, shrink }) => {
+  const BASE_CLASSNAME = "cell";
+  const tokens = [BASE_CLASSNAME];
 
   if (auto) {
-    props.push("auto");
+    tokens.push("auto");
   } else if (shrink) {
-    props.push("shrink");
+    tokens.push("shrink");
   } else {
     if (small) {
-      props.push(`small-${small}`);
+      tokens.push(`small-${small}`);
     }
 
     if (medium) {
-      props.push(`medium-${medium}`);
+      tokens.push(`medium-${medium}`);
     }
 
     if (large) {
-      props.push(`large-${large}`);
+      tokens.push(`large-${large}`);
     }
   }
 
-  return generateClassName("cell", props);
+  return generateClassName(tokens);
 };
 
 export const Cell = ({ id, style, children, ...others }) => (
-  <div id={id || null} style={style || null} className={generateCellClassName(others)}>{children}</div>
+  <div id={id || null} style={style || null} className={buildClassName(others)}>{children}</div>
 );
 
 export default Cell;
