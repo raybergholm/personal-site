@@ -21,10 +21,10 @@ const BlogPost = ({ _id, link, title, timestamp, author, tags, body }) => (
     <h2><a href={`${ARTICLE_ROOT_URL}${link}`}>{title}</a></h2>
     <p>{timestamp} - <strong>{author}</strong></p>
     <div dangerouslySetInnerHTML={{ __html: parseText(body) }} />
-    <p>
-    <small>Tags:</small>
-    {tags.map((tag, index) => <Label key={index} text={tag} />)}
-    </p>
+    <div>
+      <small>Tags:</small>
+      {tags.map((tag, index) => <Label key={index} text={tag} />)}
+    </div>
     <hr />
   </article>
 );

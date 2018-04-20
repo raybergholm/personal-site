@@ -18,7 +18,7 @@ const fetchMainContent = () => {
     currentIndex: 1,
     pageCount: 12
   };
-  const pagination = (<Pagination settings={paginationSettings} />);
+  const pagination = (<Pagination key="pagination" settings={paginationSettings} />);
 
   return [posts, pagination];
 };
