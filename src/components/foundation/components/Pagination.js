@@ -25,10 +25,10 @@ const Pagination = ({ id, style, settings, ...others }) => {
 export default Pagination;
 
 Pagination.propTypes = {
-  children: PropTypes.oneOfType(
+  children: PropTypes.oneOfType([
     PropTypes.object,
     PropTypes.array
-  ),
+  ]),
   id: PropTypes.string,
   settings: PropTypes.object,
   style: PropTypes.object

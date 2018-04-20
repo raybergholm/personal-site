@@ -45,14 +45,14 @@ const Callout = ({ id, style, children, closable, ...others }) => (
 export default Callout;
 
 Callout.propTypes = {
-  children: PropTypes.oneOfType(
+  children: PropTypes.oneOfType([
     PropTypes.object,
     PropTypes.array
-  ),
-  closable: PropTypes.oneOfType(
+  ]),
+  closable: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.bool
-  ),
+  ]),
   id: PropTypes.string,
   style: PropTypes.object
 };

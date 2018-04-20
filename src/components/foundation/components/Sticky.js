@@ -33,10 +33,10 @@ const Sticky = ({ id, style, children, ...others }) => (
 export default Sticky;
 
 Sticky.propTypes = {
-  children: PropTypes.oneOfType(
+  children: PropTypes.oneOfType([
     PropTypes.object,
     PropTypes.array
-  ),
+  ]),
   id: PropTypes.string,
   style: PropTypes.object
 };

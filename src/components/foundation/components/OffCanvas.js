@@ -17,14 +17,14 @@ export default OffCanvas;
 OffCanvas.propTypes = {
     ids: PropTypes.string,
     direction: PropTypes.string,
-    mainContent: PropTypes.oneOfType(
+    mainContent: PropTypes.oneOfType([
         PropTypes.object,
         PropTypes.array
-    ),
-    sideContent: PropTypes.oneOfType(
+    ]),
+    sideContent: PropTypes.oneOfType([
         PropTypes.object,
         PropTypes.array
-    ),
+    ]),
     styles: PropTypes.object
 };
 

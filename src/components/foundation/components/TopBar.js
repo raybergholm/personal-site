@@ -16,13 +16,13 @@ export default TopBar;
 
 TopBar.propTypes = {
   id: PropTypes.string,
-  left: PropTypes.oneOfType(
+  left: PropTypes.oneOfType([
     PropTypes.object,
     PropTypes.array
-  ),
-  right: PropTypes.oneOfType(
+  ]),
+  right: PropTypes.oneOfType([
     PropTypes.object,
     PropTypes.array
-  ),
+  ]),
   style: PropTypes.object
 };
