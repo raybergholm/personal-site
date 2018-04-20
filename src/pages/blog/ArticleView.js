@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import TwoColumnRightContainer from "../../components/layout/TwoColumnRightContainer";
+import TwoColumnRightBody from "../../components/layout/TwoColumnRightBody";
 import ArticleNavigation from "../../components/layout/ArticleNavigation";
 import BlogPost from "../../components/BlogPost";
 import BlogSidebar from "../../components/layout/BlogSidebar";
@@ -26,10 +26,10 @@ const handlePrev = (state) => {
 };
 
 const Page = ({ match }) => (
-  <TwoColumnRightContainer id="main-content-section" side={<BlogSidebar topAnchor="app-header:bottom" bottomAnchor="app-footer:top" />}>
+  <TwoColumnRightBody id="main-content-section" side={<BlogSidebar topAnchor="app-header:bottom" bottomAnchor="app-footer:top" />}>
     <ArticleNavigation onNext={handleNext} onPrev={handlePrev} />
     {fetchArticle(match.params.articleId)}
-  </TwoColumnRightContainer>
+  </TwoColumnRightBody>
 );
 
 Page.propTypes = {

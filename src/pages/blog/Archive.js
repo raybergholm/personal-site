@@ -1,15 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import TwoColumnRightContainer from "../../components/layout/TwoColumnRightContainer";
+import TwoColumnRightBody from "../../components/layout/TwoColumnRightBody";
 import BlogSidebar from "../../components/layout/BlogSidebar";
 
 const Page = ({match}) => (
-  <TwoColumnRightContainer id="main-content-section" side={<BlogSidebar topAnchor="app-header:bottom" bottomAnchor="app-footer:top" />}>
+  <TwoColumnRightBody id="main-content-section" side={<BlogSidebar topAnchor="app-header:bottom" bottomAnchor="app-footer:top" />}>
     <div>
       <p>I am the blog archive page for {match.params.month}/{match.params.year}</p>
     </div>
-  </TwoColumnRightContainer>
+  </TwoColumnRightBody>
 );
 
 Page.propTypes = {

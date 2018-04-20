@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 import { Pagination } from "../../components/foundation/Foundation";
 
-import TwoColumnRightContainer from "../../components/layout/TwoColumnRightContainer";
+import TwoColumnRightBody from "../../components/layout/TwoColumnRightBody";
 import BlogPost from "../../components/BlogPost";
 import BlogSidebar from "../../components/layout/BlogSidebar";
 
@@ -24,9 +24,9 @@ const fetchMainContent = (pageNumber) => {
 };
 
 const Page = ({ match }) => (
-  <TwoColumnRightContainer id="main-content-section" side={<BlogSidebar topAnchor="app-header:bottom" bottomAnchor="app-footer:top" />}>
+  <TwoColumnRightBody id="main-content-section" side={<BlogSidebar topAnchor="app-header:bottom" bottomAnchor="app-footer:top" />}>
     {fetchMainContent(getPageNumber(match))}
-  </TwoColumnRightContainer>
+  </TwoColumnRightBody>
 );
 
 Page.propTypes = {

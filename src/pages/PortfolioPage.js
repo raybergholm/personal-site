@@ -1,14 +1,14 @@
 import React from "react";
 
-import TwoColumnLeftContainer from "../components/layout/TwoColumnLeftContainer";
+import TwoColumnLeftBody from "../components/layout/TwoColumnLeftBody";
 
 import Main from "./portfolio/Main";
 import Side from "./portfolio/Side";
 
 const Page = () => (
-  <TwoColumnLeftContainer id="main-content-section" side={<Side />} full padding>
+  <TwoColumnLeftBody id="main-content-section" side={<Side />} full padding>
     <Main />
-  </TwoColumnLeftContainer>
+  </TwoColumnLeftBody>
 );
 
 export default Page;
