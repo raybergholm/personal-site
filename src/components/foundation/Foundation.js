@@ -11,7 +11,7 @@ import Menu from "./components/Menu";
 import MenuItem from "./components/MenuItem";
 import OffCanvas from "./components/OffCanvas";
 import Pagination from "./components/Pagination";
-import Row from "./components/Col";
+import Row from "./components/Row";
 import Sticky from "./components/Sticky";
 import TopBar from "./components/TopBar";
 
