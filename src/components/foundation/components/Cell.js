@@ -4,7 +4,31 @@ import PropTypes from "prop-types";
 import { generateClassName } from "./utils";
 
 const parseCellSizingProps = (base, props) => {
+  const TOKEN_DELIMITER = "-";
 
+  const tokens = [base];
+
+  if (props instanceof Object) {
+    const { size, offset, block, blockY } = props;
+
+    if (block) {
+      tokens.push("cell-block");
+    } else if (blockY) {
+      tokens.push("cell-block-y");
+    } else {
+      if (offset) {
+        tokens.push("offset");
+      }
+
+      if (size) {
+        tokens.push(size);
+      }
+    }
+  } else {
+    tokens.push(props);
+  }
+
+  return tokens.join(TOKEN_DELIMITER);
 };
 
 const buildClassName = ({ small, medium, large, auto, shrink }) => {
@@ -18,17 +42,14 @@ const buildClassName = ({ small, medium, large, auto, shrink }) => {
   } else {
     if (small) {
       tokens.push(parseCellSizingProps("small", small));
-      tokens.push(`small-${small}`);
     }
 
     if (medium) {
-      tokens.push(parseCellSizingProps("medium", small));
-      tokens.push(`medium-${medium}`);
+      tokens.push(parseCellSizingProps("medium", medium));
     }
 
     if (large) {
-      tokens.push(parseCellSizingProps("large", small));
-      tokens.push(`large-${large}`);
+      tokens.push(parseCellSizingProps("large", large));
     }
   }
 

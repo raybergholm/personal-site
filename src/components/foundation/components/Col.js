@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 import { generateClassName } from "./utils";
 
-const buildClassName = ({ margin, padding, collapse }) => {
+const buildClassName = ({ margin, padding, collapse, small, medium, large }) => {
   const BASE_CLASSNAME = "grid-y";
   const tokens = [BASE_CLASSNAME];
 
@@ -17,6 +17,18 @@ const buildClassName = ({ margin, padding, collapse }) => {
 
   if (collapse) {
     tokens.push(`${collapse}-margin-collapse`);
+  }
+
+  if(small){
+    tokens.push(`small-up-${small}`);
+  }
+
+  if(medium){
+    tokens.push(`medium-up-${medium}`);
+  }
+
+  if(large){
+    tokens.push(`large-up-${large}`);
   }
 
   return generateClassName(tokens);
