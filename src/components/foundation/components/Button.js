@@ -53,10 +53,10 @@ const buildClassName = ({ dropdown, hollow, clear, disabled, primary, secondary,
 
 const Button = ({ link, action, text, disabled, ...others }) => {
   if (link) {
-    return <a href={link} disabled={disabled || null} className={buildClassName({ disabled, ...others })}>{text}</a>;
+    return (<a href={link} disabled={disabled || null} className={buildClassName({ disabled, ...others })}>{text}</a>);
   }
   if (action) {
-    return <button type="button" onClick={action} disabled={disabled || null} className={buildClassName({ disabled, ...others })}>{text}</button>;
+    return (<button type="button" onClick={action} disabled={disabled || null} className={buildClassName({ disabled, ...others })}>{text}</button>);
   }
   return null;
 };

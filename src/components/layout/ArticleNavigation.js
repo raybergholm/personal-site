@@ -1,12 +1,18 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import { Button } from "../foundation/Foundation";
 
-const ArticleNavigation = () => (
+const ArticleNavigation = ({onPrev, onNext}) => (
   <div>
-    <Button link="#prev" text="Previous" />
-    <Button link="#next" text="Next" />
+    <Button action={onPrev} text="Previous" />
+    <Button action={onNext} text="Next" />
   </div>
 );
 
 export default ArticleNavigation;
+
+ArticleNavigation.propTypes = {
+  onNext: PropTypes.func,
+  onPrev: PropTypes.func
+};
