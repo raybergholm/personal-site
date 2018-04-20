@@ -11,21 +11,21 @@ import mockPosts from "../../config/mockPosts.json";
 
 const getPageNumber = (params) => params.pageNumber;
 
-const fetchMainContent = () => {
+const fetchMainContent = (pageNumber) => {
   const posts = mockPosts.map((props) => (<BlogPost key={props._id} {...props} />));
-  
+
   const paginationSettings = {
     currentIndex: 1,
     pageCount: 12
   };
-  const pagination = (<Pagination key="pagination" settings={paginationSettings} />);
+  const pagination = (<Pagination key="pagination" {...paginationSettings} />);
 
   return [posts, pagination];
 };
 
-const Page = ({match}) => (
+const Page = ({ match }) => (
   <TwoColumnRightContainer id="main-content-section" side={<BlogSidebar topAnchor="app-header:bottom" bottomAnchor="app-footer:top" />}>
-    {fetchMainContent()}
+    {fetchMainContent(getPageNumber(match))}
   </TwoColumnRightContainer>
 );
 

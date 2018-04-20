@@ -1,9 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Pagination = ({ id, style, settings, ...others }) => {
-  const { currentIndex, pageCount, visibleRange } = settings;
-
+const Pagination = ({ id, style, currentIndex, pageCount, visibleRange, ...others }) => {
   const enabledPreviousButton = currentIndex > 1;
   const enabledNextButton = currentIndex < pageCount;
   
@@ -29,7 +27,10 @@ Pagination.propTypes = {
     PropTypes.object,
     PropTypes.array
   ]),
+  currentIndex: PropTypes.number,
   id: PropTypes.string,
+  pageCount: PropTypes.number,
   settings: PropTypes.object,
-  style: PropTypes.object
+  style: PropTypes.object,
+  visibleRange: PropTypes.arrayOf(PropTypes.number)
 };
