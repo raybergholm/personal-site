@@ -1,8 +1,9 @@
 import React from "react";
 
-import { Callout, Sticky } from "../foundation/Foundation";
+import { Sticky } from "../foundation/Foundation";
 
 import Navbar from "./Navbar";
+import Banner from "./Banner";
 
 import navbarItems from "../../config/navbarItems.json";
 
@@ -28,10 +29,10 @@ const stickyConfig = {
   "data-top-anchor": "1"
 };
 
-const Banner = () => (
-  <Callout id="app-header-banner" style={bannerStyle}>
+const banner = () => (
+  <Banner id="app-header-banner" style={bannerStyle}>
     <span>mostly normal.</span>
-  </Callout>
+  </Banner>
 );
 
 const Header = () => (
