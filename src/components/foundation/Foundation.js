@@ -15,6 +15,20 @@ import Row from "./components/Row";
 import Sticky from "./components/Sticky";
 import TopBar from "./components/TopBar";
 
+export const Colors = {
+  PRIMARY: "primary",
+  SECONDARY: "secondary",
+  SUCCESS: "success",
+  WARNING: "warning",
+  ALERT: "alert"
+};
+
+export const Sizes = {
+  TINY: "tiny",
+  SMALL: "small",
+  LARGE: "large"
+};
+
 export {
   Button,
   Callout,
@@ -33,3 +47,4 @@ export {
   Sticky,
   TopBar
 };
+

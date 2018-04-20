@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+import { Colors, Sizes } from "../Foundation";
 import { generateClassName } from "./utils";
 
 const buildClassName = ({ dropdown, hollow, clear, disabled, primary, secondary, success, warning, alert, tiny, small, large, expanded }) => {
@@ -24,29 +25,29 @@ const buildClassName = ({ dropdown, hollow, clear, disabled, primary, secondary,
   }
 
   if (primary) {
-    tokens.push("primary");
+    tokens.push(Colors.PRIMARY);
   } else if (secondary) {
-    tokens.push("secondary");
+    tokens.push(Colors.SECONDARY);
   } else if (success) {
-    tokens.push("success");
+    tokens.push(Colors.SUCCESS);
   } else if (warning) {
-    tokens.push("warning");
+    tokens.push(Colors.WARNING);
   } else if (alert) {
-    tokens.push("alert");
+    tokens.push(Colors.ALERT);
   }
 
   if (tiny) {
-    tokens.push("tiny");
+    tokens.push(Sizes.TINY);
   } else if (small) {
-    tokens.push("small");
+    tokens.push(Sizes.SMALL);
   } else if (large) {
-    tokens.push("large");
+    tokens.push(Sizes.LARGE);
   }
 
   if (expanded) {
     tokens.push("expanded");
   }
-  
+
   return generateClassName(tokens);
 };
 

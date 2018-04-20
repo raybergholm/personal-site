@@ -1,4 +1,3 @@
-export const generateClassName = (tokens) => {
-  const DELIMITER = " ";
-  return tokens.join(DELIMITER);
-};
+const CLASSNAME_DELIMITER = " ";
+
+export const generateClassName = (tokens) => tokens.join(CLASSNAME_DELIMITER);
