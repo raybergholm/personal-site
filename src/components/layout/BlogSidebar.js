@@ -17,7 +17,7 @@ const stickyConfig = {
 
 const BlogSidebar = () => (
   <menu data-sticky-container>
-    <Sticky stickyConfig={stickyConfig}>
+    <Sticky {...stickyConfig}>
       <SearchPanel action={null} />
       <QuickLinksMenu items={quickLinks} />
       <ArchiveMenu items={archiveLinks} />

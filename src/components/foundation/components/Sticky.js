@@ -10,12 +10,22 @@ const buildClassName = () => {
   return generateClassName(tokens);
 };
 
-const configureSticky = (stickyConfig) => {
+const configureSticky = (configs) => {
+  const stickyConfigProps = ["data-options", "data-top-anchor", "data-btm-anchor", "data-stick-to"];
 
+  const stickyConfig = {};
+
+  for (const prop in configs) {
+    if (stickyConfigProps.indexOf(prop) > -1) {
+      stickyConfig[prop] = configs[prop];
+    }
+  }
+
+  return stickyConfig;
 };
 
-const Sticky = ({ id, style, config, children, ...others }) => (
-  <div id={id} style={style} data-sticky {...configureSticky(config)} className={buildClassName(others)}>
+const Sticky = ({ id, style, children, ...others }) => (
+  <div id={id} style={style} data-sticky {...configureSticky(others)} className={buildClassName(others)}>
     {children}
   </div>
 );
@@ -27,7 +37,6 @@ Sticky.propTypes = {
     PropTypes.object,
     PropTypes.array
   ),
-  config: PropTypes.object,
   id: PropTypes.string,
   style: PropTypes.object
 };

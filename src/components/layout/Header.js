@@ -36,7 +36,7 @@ const Banner = () => (
 
 const Header = () => (
   <header id="app-header" data-sticky-container>
-    <Sticky style={stickyBarStyle} stickyConfig={stickyConfig}>
+    <Sticky style={stickyBarStyle} {...stickyConfig}>
       <Navbar brand={brand} items={navbarItems} />
     </Sticky>
   </header>
