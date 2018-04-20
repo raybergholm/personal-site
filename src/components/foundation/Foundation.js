@@ -15,6 +15,9 @@ import Row from "./components/Row";
 import Sticky from "./components/Sticky";
 import TopBar from "./components/TopBar";
 
+import VisibilityClasses from "./VisibilityClasses";
+import FloatClasses from "./FloatClasses";
+
 export const Colors = {
   PRIMARY: "primary",
   SECONDARY: "secondary",
@@ -60,3 +63,7 @@ export {
   TopBar
 };
 
+export {
+  VisibilityClasses,
+  FloatClasses
+};
