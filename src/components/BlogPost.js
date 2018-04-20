@@ -19,7 +19,7 @@ const parseText = (text) => converter.makeHtml(text);
 const BlogPost = ({ _id, link, title, timestamp, author, tags, body }) => (
   <article id={`blog-post-${_id}`}>
     <h2><a href={`${ARTICLE_ROOT_URL}${link}`}>{title}</a></h2>
-    <p>{timestamp} - <strong>{author}</strong></p>
+    <p>{timestamp} | <strong>{author}</strong></p>
     <div dangerouslySetInnerHTML={{ __html: parseText(body) }} />
     <div>
       <small>Tags:</small>
