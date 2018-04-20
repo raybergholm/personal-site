@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import QuickLinksMenu from "./sidebar/QuickLinksMenu";
 import ArchiveMenu from "./sidebar/ArchiveMenu";
@@ -9,15 +10,15 @@ import { Sticky } from "../foundation/Foundation";
 import quickLinks from "../../config/quickLinks.json";
 import archiveLinks from "../../config/archiveLinks.json";
 
-const stickyConfig = {
+const buildStickConfig = ({topAnchor, bottomAnchor}) => ({
   "data-options": "marginTop:4;",
-  "data-top-anchor": "app-header:bottom",
-  "data-bottom-anchor": "app-footer:top"
-};
+  "data-top-anchor": topAnchor,
+  "data-bottom-anchor": bottomAnchor
+});
 
-const BlogSidebar = () => (
+const BlogSidebar = (props) => (
   <menu data-sticky-container>
-    <Sticky {...stickyConfig}>
+    <Sticky {...buildStickConfig(props)}>
       <SearchPanel action={null} />
       <QuickLinksMenu items={quickLinks} />
       <ArchiveMenu items={archiveLinks} />
@@ -26,3 +27,7 @@ const BlogSidebar = () => (
 );
 
 export default BlogSidebar;
+
+BlogSidebar.propTypes = {
+  props: PropTypes.object
+};

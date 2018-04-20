@@ -18,7 +18,7 @@ const fetchArticle = (articleId) => {
 };
 
 const Page = ({match}) => (
-  <TwoColumnRightContainer id="main-content-section" side={<BlogSidebar />}>
+  <TwoColumnRightContainer id="main-content-section" side={<BlogSidebar topAnchor="app-header:bottom" bottomAnchor="app-footer:top" />}>
     <ArticleNavigation />
     {fetchArticle(match.params.articleId)}
   </TwoColumnRightContainer>

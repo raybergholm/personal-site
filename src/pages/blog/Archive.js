@@ -5,7 +5,7 @@ import TwoColumnRightContainer from "../../components/layout/TwoColumnRightConta
 import BlogSidebar from "../../components/layout/BlogSidebar";
 
 const Page = ({match}) => (
-  <TwoColumnRightContainer id="main-content-section" side={<BlogSidebar />}>
+  <TwoColumnRightContainer id="main-content-section" side={<BlogSidebar topAnchor="app-header:bottom" bottomAnchor="app-footer:top" />}>
     <div>
       <p>I am the blog archive page for {match.params.month}/{match.params.year}</p>
     </div>

@@ -24,7 +24,7 @@ const fetchMainContent = () => {
 };
 
 const Page = ({match}) => (
-  <TwoColumnRightContainer id="main-content-section" side={<BlogSidebar />}>
+  <TwoColumnRightContainer id="main-content-section" side={<BlogSidebar topAnchor="app-header:bottom" bottomAnchor="app-footer:top" />}>
     {fetchMainContent()}
   </TwoColumnRightContainer>
 );
