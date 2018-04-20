@@ -5,7 +5,7 @@ import { generateClassName } from "./utils";
 
 import MenuItem from "./MenuItem";
 
-const buildClassName = ({ simple, vertical, alignMiddle, alignRight, icons, iconTop, iconBottom, iconLeft, iconRight }) => {
+const buildClassName = ({ simple, vertical, expanded, nested, alignment, icons }) => {
   const BASE_CLASSNAME = "menu";
   const tokens = [BASE_CLASSNAME];
 
@@ -15,26 +15,23 @@ const buildClassName = ({ simple, vertical, alignMiddle, alignRight, icons, icon
 
   if (vertical) {
     tokens.push("vertical");
-
-    if (alignMiddle) {
-      tokens.push("align-middle");
-    } else if (alignRight) {
-      tokens.push("align-right");
-    }
   }
 
-  if (icons && (iconTop || iconBottom || iconLeft || iconRight)) {
-    tokens.push("icons");
+  if(expanded) {
+    tokens.push("expanded");
+  }
 
-    if (iconTop) {
-      tokens.push("icon-top");
-    } else if (iconBottom) {
-      tokens.push("icon-bottom");
-    } else if (iconLeft) {
-      tokens.push("icon-left");
-    } else if (iconRight) {
-      tokens.push("icon-right");
-    }
+  if(nested) {
+    tokens.push("nested");
+  }
+
+  if (alignment) {
+      tokens.push(alignment);
+  }
+
+  if (icons) {
+    tokens.push("icons");
+    tokens.push(icons);
   }
 
   return generateClassName(tokens);

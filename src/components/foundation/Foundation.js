@@ -29,6 +29,18 @@ export const Sizes = {
   LARGE: "large"
 };
 
+export const Alignment = {
+  CENTER: "align-center",
+  RIGHT: "align-right"
+};
+
+export const IconAlignment = {
+  TOP: "icon-top",
+  RIGHT: "icon-right",
+  BOTTOM: "icon-bottom",
+  LEFT: "icon-left"
+};
+
 export {
   Button,
   Callout,
