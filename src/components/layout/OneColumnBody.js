@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 import { GridContainer, Cell, Row } from "../foundation/Foundation";
 
-const Container = ({ id, style, children, ...others }) => (
+const Body = ({ id, style, children, ...others }) => (
   <GridContainer id={id || null} style={style || null} {...others}>
     <Row>
       <Cell {...others}>
@@ -13,7 +13,7 @@ const Container = ({ id, style, children, ...others }) => (
   </GridContainer>
 );
 
-Container.propTypes = {
+Body.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.object,
     PropTypes.array
@@ -22,4 +22,4 @@ Container.propTypes = {
   style: PropTypes.object
 };
 
-export default Container;
+export default Body;
