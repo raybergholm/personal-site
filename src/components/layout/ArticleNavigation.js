@@ -6,11 +6,11 @@ import { Row, Cell, Button } from "../foundation/Foundation";
 const ArticleNavigation = ({ onPrev, onNext }) => (
   <Row>
     <Cell small={2}>
-      <Button action={onPrev} expanded text="<<< Previous" />
+      <Button action={onPrev} expanded text="Previous" />
     </Cell>
     <Cell auto></Cell>
     <Cell small={2}>
-      <Button action={onNext} expanded text="Next >>>" />
+      <Button action={onNext} expanded text="Next" />
     </Cell>
   </Row>
 );
