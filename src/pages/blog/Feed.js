@@ -30,7 +30,7 @@ const Page = ({match}) => (
 );
 
 Page.propTypes = {
-  match: PropTypes.string
+  match: PropTypes.object
 };
 
 export default Page;
