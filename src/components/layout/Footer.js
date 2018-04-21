@@ -1,7 +1,14 @@
 import React from "react";
 
+const footerStyle = {
+  "background-color": "#DDDDDD",
+  "height": "150px",
+  "padding": "20px",
+  // "color": "white"
+};
+
 const Footer = () => (
-  <footer id="app-footer" className="app-footer">
+  <footer id="app-footer" style={footerStyle} className="app-footer">
     <p>&copy; 2018 Raymond Bergholm</p>
   </footer>
 );
