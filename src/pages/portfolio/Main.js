@@ -1,8 +1,12 @@
 import React from "react";
 
-import { Callout, Col, Cell } from "../../components/foundation/Foundation";
+import { Callout, Col, Row, Cell, GridContainer } from "../../components/foundation/Foundation";
 
 import ContactForm from "../../components/ContactForm";
+
+import ProjectCard from "./ProjectCard";
+
+import projects from "../../config/projects.json";
 
 const contactFormLabels = {
   name: "Name",
@@ -31,7 +35,15 @@ const Main = () => (
       </Callout>
     </Cell>
     <Cell>
-      <p>This is the main section</p>
+      <GridContainer>
+        <Row small={1} medium={2} large={4} margin>
+          {projects.map(({ title, coverImage, abstract }, index) => (
+            <Cell key={index}>
+              <ProjectCard title={title} coverImage={coverImage} abstract={abstract} />
+            </Cell>
+          ))}
+        </Row>
+      </GridContainer>
     </Cell>
     <Cell>
       <hr />

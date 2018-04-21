@@ -10,7 +10,7 @@ import { Sticky } from "../foundation/Foundation";
 import quickLinks from "../../config/quickLinks.json";
 import archiveLinks from "../../config/archiveLinks.json";
 
-const buildStickConfig = ({topAnchor, bottomAnchor}) => ({
+const buildStickyConfig = ({topAnchor, bottomAnchor}) => ({
   "data-options": "marginTop:4;",
   "data-top-anchor": topAnchor,
   "data-bottom-anchor": bottomAnchor
@@ -18,7 +18,7 @@ const buildStickConfig = ({topAnchor, bottomAnchor}) => ({
 
 const BlogSidebar = (props) => (
   <menu data-sticky-container>
-    <Sticky {...buildStickConfig(props)}>
+    <Sticky {...buildStickyConfig(props)}>
       <SearchPanel action={null} />
       <QuickLinksMenu items={quickLinks} />
       <ArchiveMenu items={archiveLinks} />
