@@ -51,9 +51,9 @@ const buildClassName = ({ dropdown, hollow, clear, disabled, primary, secondary,
   return generateClassName(tokens);
 };
 
-const Button = ({ children, link, action, disabled, ...others }) => {
+const Button = ({ children, link, target="_self", action, disabled, ...others }) => {
   if (link) {
-    return (<a href={link} disabled={disabled || null} className={buildClassName({ disabled, ...others })}>{children}</a>);
+    return (<a href={link} target={target} disabled={disabled || null} className={buildClassName({ disabled, ...others })}>{children}</a>);
   }
   if (action) {
     return (<button type="button" onClick={action} disabled={disabled || null} className={buildClassName({ disabled, ...others })}>{children}</button>);
@@ -67,5 +67,6 @@ Button.propTypes = {
   action: PropTypes.func,
   children: PropTypes.string,
   disabled: PropTypes.bool,
-  link: PropTypes.string
+  link: PropTypes.string,
+  target: PropTypes.string
 };
