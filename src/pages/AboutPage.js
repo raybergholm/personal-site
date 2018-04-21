@@ -1,5 +1,7 @@
 import React from "react";
 
+import OneColumnBody from "../components/layout/OneColumnBody";
+
 import ContactLinks from "./ContactLinks";
 import ContactForm from "../components/ContactForm";
 
@@ -23,13 +25,13 @@ const onSubmit = () => {
 };
 
 const Page = () => (
-  <div>
+  <OneColumnBody>
     
     <p>I am the about page</p>
 
     <ContactLinks />
     <ContactForm _id="portfolioContactForm" labels={contactFormLabels} placeholders={contactFormPlaceholders} submitAction={onSubmit} />
-  </div>
+  </OneColumnBody>
 );
 
 export default Page;
