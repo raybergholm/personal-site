@@ -19,7 +19,7 @@ const blurb = [
 const Side = () => (
   <Col style={colStyle} padding>
     <Cell shrink>
-      <img className="thumbnail" src={profilePicture} />
+      <img src={profilePicture} />
     </Cell>
     <Cell>
       <h5><strong>Ray Bergholm</strong></h5>

@@ -14,7 +14,7 @@ const ProjectCard = ({ title, id, coverImage, abstract }) => (
         <a href={`/portfolio/${id}`}>{title}</a>
       </CardDivider>
       <a href={`/portfolio/${id}`}>
-        <img src={coverImage} />
+        <img className="thumbnail" src={coverImage} />
       </a>
       <CardSection>
         <p>{abstract}</p>
