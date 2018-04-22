@@ -3,22 +3,31 @@ import PropTypes from "prop-types";
 
 import { Card, CardDivider, CardSection } from "../../components/foundation/Foundation";
 
-const ProjectCard = ({ title, coverImage, abstract }) => (
-  <Card>
-    <CardDivider>
-      <p>{title}</p>
-    </CardDivider>
-    <img src={coverImage} />
-    <CardSection>
-      <p>{abstract}</p>
-    </CardSection>
-  </Card>
+const onClick = () => {
+  console.log("I clicked, title: ", this.title);
+};
+
+const ProjectCard = ({ title, id, coverImage, abstract }) => (
+  <div onClick={onClick}>
+    <Card>
+      <CardDivider>
+        <a href={`/portfolio/${id}`}>{title}</a>
+      </CardDivider>
+      <a href={`/portfolio/${id}`}>
+        <img src={coverImage} />
+      </a>
+      <CardSection>
+        <p>{abstract}</p>
+      </CardSection>
+    </Card>
+  </div>
 );
 
 export default ProjectCard;
 
 ProjectCard.propTypes = {
-  title: PropTypes.string,
   abstract: PropTypes.string,
-  coverImage: PropTypes.object
+  coverImage: PropTypes.object,
+  id: PropTypes.string,
+  title: PropTypes.string
 };
