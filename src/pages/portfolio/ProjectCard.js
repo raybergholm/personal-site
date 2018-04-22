@@ -10,13 +10,11 @@ const onClick = () => {
 const ProjectCard = ({ title, id, coverImage, abstract }) => (
   <div onClick={onClick}>
     <Card>
-      <CardDivider>
-        <a href={`/portfolio/${id}`}>{title}</a>
-      </CardDivider>
       <a href={`/portfolio/${id}`}>
         <img className="thumbnail" src={coverImage} />
       </a>
       <CardSection>
+        <a href={`/portfolio/${id}`}><h5>{title}</h5></a>
         <p>{abstract}</p>
       </CardSection>
     </Card>

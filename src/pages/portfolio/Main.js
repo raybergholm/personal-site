@@ -35,17 +35,19 @@ const Main = () => (
   <Col>
     <Cell>
       <Callout>
-        <span>Stuff I have done</span>
+        <span>My projects</span>
       </Callout>
     </Cell>
     <Cell>
-      <Row small={1} medium={2} large={4} margin>
-        {projects.map(({ id, title, coverImage, abstract }, index) => (
-          <Cell key={index} style={blockGridCellStyle}>
-            <ProjectCard id={id} title={title} coverImage={coverImage} abstract={abstract} />
-          </Cell>
-        ))}
-      </Row>
+      <Callout>
+        <Row small={1} medium={2} large={4} margin>
+          {projects.map(({ id, title, coverImage, abstract }, index) => (
+            <Cell key={index} style={blockGridCellStyle}>
+              <ProjectCard id={id} title={title} coverImage={coverImage} abstract={abstract} />
+            </Cell>
+          ))}
+        </Row>
+      </Callout>
     </Cell>
     <Cell>
       <hr />
