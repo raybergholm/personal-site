@@ -13,9 +13,5 @@
     {
         "text": "About",
         "link": "/about"
-    },
-    {
-        "text": "Contact",
-        "link": "/contact"
     }
 ]
