@@ -23,6 +23,10 @@ const contactFormPlaceholders = {
   message: "Your message..."
 };
 
+const blockGridCellStyle = {
+  width: "300px"
+};
+
 const onSubmit = () => {
 
 };
@@ -38,7 +42,7 @@ const Main = () => (
       <GridContainer>
         <Row small={1} medium={2} large={4} margin>
           {projects.map(({ title, coverImage, abstract }, index) => (
-            <Cell key={index}>
+            <Cell key={index} style={blockGridCellStyle}>
               <ProjectCard title={title} coverImage={coverImage} abstract={abstract} />
             </Cell>
           ))}

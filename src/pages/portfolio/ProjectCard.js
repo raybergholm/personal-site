@@ -3,12 +3,8 @@ import PropTypes from "prop-types";
 
 import { Card, CardDivider, CardSection } from "../../components/foundation/Foundation";
 
-const style = {
-  width: "300px"
-};
-
 const ProjectCard = ({ title, coverImage, abstract }) => (
-  <Card style={style}>
+  <Card>
     <CardDivider>
       <p>{title}</p>
     </CardDivider>
