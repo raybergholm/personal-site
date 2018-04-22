@@ -2,9 +2,10 @@ import React from "react";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 
 import HomePage from "./pages/Home";
-import PortfolioPage from "./pages/PortfolioPage";
 import AboutPage from "./pages/AboutPage";
-import ContactPage from "./pages/ContactPage";
+
+import PortfolioPage from "./pages/PortfolioPage";
+// import ProjectView from "./pages/ProjectView";
 
 import BlogFeedPage from "./pages/blog/Feed";
 import BlogArchivePage from "./pages/blog/Archive";
@@ -14,9 +15,9 @@ const AppRouter = () => (
   <BrowserRouter>
     <Switch>
       <Route exact path="/" component={HomePage} />
-      <Route path="/portfolio" component={PortfolioPage} />
+      <Route exact path="/portfolio" component={PortfolioPage} />
+      <Route path="/portfolio/:projectId" component={PortfolioPage} />
       <Route path="/about" component={AboutPage} />
-      <Route path="/contact" component={ContactPage} />
       <Route exact path="/blog" component={BlogFeedPage} />
       <Route path="/blog/page/:pageNumber" component={BlogFeedPage} />
       <Route path="/blog/article/:articleId" component={BlogArticlePage} />
