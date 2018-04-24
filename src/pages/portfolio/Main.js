@@ -41,9 +41,9 @@ const Main = () => (
     <Cell>
       <Callout>
         <Row small={1} medium={2} large={4} margin>
-          {projects.map(({ id, title, coverImage, abstract }, index) => (
+          {projects.map(({ _id, title, coverImage, abstract }, index) => (
             <Cell key={index} style={blockGridCellStyle}>
-              <ProjectCard id={id} title={title} coverImage={coverImage} abstract={abstract} />
+              <ProjectCard id={_id} title={title} coverImage={coverImage} abstract={abstract} />
             </Cell>
           ))}
         </Row>

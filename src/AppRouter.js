@@ -5,7 +5,7 @@ import HomePage from "./pages/Home";
 import AboutPage from "./pages/AboutPage";
 
 import PortfolioPage from "./pages/PortfolioPage";
-// import ProjectView from "./pages/ProjectView";
+import ProjectView from "./pages/ProjectView";
 
 import BlogFeedPage from "./pages/blog/Feed";
 import BlogArchivePage from "./pages/blog/Archive";
@@ -16,7 +16,7 @@ const AppRouter = () => (
     <Switch>
       <Route exact path="/" component={HomePage} />
       <Route exact path="/portfolio" component={PortfolioPage} />
-      <Route path="/portfolio/:projectId" component={PortfolioPage} />
+      <Route path="/portfolio/:projectId" component={ProjectView} />
       <Route path="/about" component={AboutPage} />
       <Route exact path="/blog" component={BlogFeedPage} />
       <Route path="/blog/page/:pageNumber" component={BlogFeedPage} />
