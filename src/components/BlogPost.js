@@ -5,7 +5,7 @@ import { Label } from "./foundation/Foundation";
 
 import Showdown from "showdown";
 
-const ARTICLE_ROOT_URL = "/blog/article/";
+const ARTICLE_ROOT_URL = "/blog/post/";
 
 const converter = new Showdown.Converter({
   headerLevelStart: 3,

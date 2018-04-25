@@ -1,6 +1,8 @@
 [{
         "_id": "1",
         "link": "1",
+        "prev": null,
+        "next": "2",
         "title": "First post",
         "timestamp": "01.04.2018",
         "author": "Bob",
@@ -10,6 +12,8 @@
     {
         "_id": "2",
         "link": "2",
+        "prev": "1",
+        "next": "3",
         "title": "Second post",
         "timestamp": "02.04.2018",
         "author": "Bob",
@@ -19,6 +23,8 @@
     {
         "_id": "3",
         "link": "3",
+        "prev": "2",
+        "next": "4",
         "title": "Third post",
         "timestamp": "03.04.2018",
         "author": "Bob",
@@ -28,6 +34,8 @@
     {
         "_id": "4",
         "link": "4",
+        "prev": "3",
+        "next": "5",
         "title": "Fourth post",
         "timestamp": "04.04.2018",
         "author": "Bob",
@@ -37,6 +45,8 @@
     {
         "_id": "5",
         "link": "5",
+        "prev": "4",
+        "next": null,
         "title": "Fifth post",
         "timestamp": "05.04.2018",
         "author": "Bob",

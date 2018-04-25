@@ -65,7 +65,10 @@ export default Button;
 
 Button.propTypes = {
   action: PropTypes.func,
-  children: PropTypes.string,
+  children: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array
+  ]),
   disabled: PropTypes.bool,
   link: PropTypes.string,
   target: PropTypes.string

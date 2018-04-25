@@ -8,29 +8,20 @@ import BlogSidebar from "../../components/layout/BlogSidebar";
 
 import mockPosts from "../../config/mockPosts.json";
 
-const fetchArticle = (articleId) => {
+const fetchPost = (articleId) => {
   const result = mockPosts.filter(({ _id }) => _id === articleId);
 
-  const post = result ? result[0] : null;
-
-
-  return post ? <BlogPost key={post._id} {...post} /> : null;
+  return result ? result[0] : null;
 };
 
-const handleNext = (state) => {
-  console.log("trying to go to next");
-};
+const Page = ({ match }) => {
+  const post = fetchPost(match.params.articleId);
 
-const handlePrev = (state) => {
-  console.log("trying to go to prev");
+  return (<TwoColumnRightBody id="main-content-section" side={<BlogSidebar topAnchor="app-header:bottom" bottomAnchor="app-footer:top" />}>
+    <ArticleNavigation prevLink={post.prev} nextLink={post.next} />
+    {post && (<BlogPost key={post._id} {...post} />)}
+  </TwoColumnRightBody>);
 };
-
-const Page = ({ match }) => (
-  <TwoColumnRightBody id="main-content-section" side={<BlogSidebar topAnchor="app-header:bottom" bottomAnchor="app-footer:top" />}>
-    <ArticleNavigation onNext={handleNext} onPrev={handlePrev} />
-    {fetchArticle(match.params.articleId)}
-  </TwoColumnRightBody>
-);
 
 Page.propTypes = {
   match: PropTypes.object,
