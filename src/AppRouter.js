@@ -5,7 +5,7 @@ import HomePage from "./pages/Home";
 import AboutPage from "./pages/AboutPage";
 
 import PortfolioPage from "./pages/PortfolioPage";
-import ProjectView from "./pages/ProjectView";
+import ProjectView from "./pages/portfolio/ProjectView";
 
 import BlogFeedPage from "./pages/blog/Feed";
 import BlogArchivePage from "./pages/blog/Archive";
