@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Callout, Col, Row, Cell, GridContainer } from "../../components/foundation/Foundation";
+import { Callout, Col, Row, Cell } from "../../components/foundation/Foundation";
 
 import ContactForm from "../../components/ContactForm";
 
