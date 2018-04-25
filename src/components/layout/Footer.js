@@ -1,7 +1,7 @@
 import React from "react";
 
 const footerStyle = {
-  "background-color": "#DDDDDD",
+  "backgroundColor": "#DDDDDD",
   "height": "150px",
   "padding": "20px",
   // "color": "white"
