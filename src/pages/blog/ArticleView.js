@@ -19,7 +19,7 @@ const Page = ({ match }) => {
 
   return (<TwoColumnRightBody id="main-content-section" side={<BlogSidebar topAnchor="app-header:bottom" bottomAnchor="app-footer:top" />}>
     <ArticleNavigation prevLink={post.prev} nextLink={post.next} />
-    {post && (<BlogPost key={post._id} {...post} />)}
+    {post && (<BlogPost key={post._id} _id={post._id} {...post.content} />)}
   </TwoColumnRightBody>);
 };
 
