@@ -51,25 +51,48 @@ const buildClassName = ({ dropdown, hollow, clear, disabled, primary, secondary,
   return generateClassName(tokens);
 };
 
-const Button = ({ children, link, target="_self", action, disabled, ...others }) => {
-  if (link) {
-    return (<a href={link} target={target} disabled={disabled || null} className={buildClassName({ disabled, ...others })}>{children}</a>);
+export const BUTTON_MODES = {
+  Button: "button",
+  Link: "link"
+};
+
+const Button = ({ mode, children, action, disabled, ...others }) => {
+  let component;
+
+  switch (mode) {
+    case BUTTON_MODES.Button:
+      component = (
+        <button type="button" onClick={action} disabled={disabled || null} className={buildClassName({ disabled, ...others })}>
+          {children}
+        </button>
+      );
+      break;
+    case BUTTON_MODES.Link:
+      component = (
+        <a href={action.link} target={action.target} disabled={disabled || null} className={buildClassName({ disabled, ...others })}>
+          {children}
+        </a>
+      );
+      break;
+    default:
+      component = null;
   }
-  if (action) {
-    return (<button type="button" onClick={action} disabled={disabled || null} className={buildClassName({ disabled, ...others })}>{children}</button>);
-  }
-  return null;
+
+  return component;
 };
 
 export default Button;
 
 Button.propTypes = {
-  action: PropTypes.func,
+  action: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.object
+  ]).isRequired,
   children: PropTypes.oneOfType([
     PropTypes.object,
     PropTypes.array
   ]),
   disabled: PropTypes.bool,
-  link: PropTypes.string,
+  mode: PropTypes.string.isRequired,
   target: PropTypes.string
 };

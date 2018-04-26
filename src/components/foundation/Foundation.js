@@ -1,4 +1,4 @@
-import Button from "./components/Button";
+import Button, { BUTTON_MODES } from "./components/Button";
 import Callout from "./components/Callout";
 import Card from "./components/Card";
 import CardDivider from "./components/CardDivider";
@@ -61,6 +61,10 @@ export {
   Row,
   Sticky,
   TopBar
+};
+
+export {
+  BUTTON_MODES
 };
 
 export {
